@@ -1,0 +1,2 @@
+# SECOND SCHEDULE
+High-risk Drugs Acetyldihydrocodine Ethylmorphine Pholcodine Dextropropoxyphene Nicodicodine Propiram Norcodeine Nicocodine Dihydrochdeine Phenmetrazine Amphetamine Methamphetamine racemate Dexamphetamine Methamphetamine Seconarbital Fenetylline Methaqualone Methylphenidate Zipeprol Levamphetamine Mecloqualone Phencyclidine
