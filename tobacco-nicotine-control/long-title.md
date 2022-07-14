@@ -1,0 +1,3 @@
+# Long title
+Being an Act to provide for the control and regulation of the production, manufacturing, importation, exportation, packaging and labeling, advertising, promotion and sponsorship, sale and use of tobacco, tobacco products and other nicotine products, to provide for the improvement of public health by reducing demand for tobacco and nicotine products, the health harms caused by the use of, and exposure to, tobacco including nicotine, by reducing demand for tobacco and nicotine products, to provide for the establishment of the Tobacco and Nicotine Control Council and to provide for other related matters.
+ENACTED by the President and Members of Parliament in this present Parliament assembled.
