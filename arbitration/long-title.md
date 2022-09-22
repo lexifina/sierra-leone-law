@@ -1,0 +1,3 @@
+# Long title
+Being an Act to repeal and replace the Arbitration Act CAP 25 to provide for the incorporation of the Convention on the Recognition and Enforcement of Arbitral Awards 1958 (New York Convention) in respect of awards made in Sierra Leone or in a contracting State, to provide for the implementation of the Convention on the Settlement of investment disputes between states and nationals of other states; to provide for fair settlement of disputes by domestic and international arbitration and to provide for other related matters.
+ENACTED by the President and Members of Parliament in this present Parliament assembled.

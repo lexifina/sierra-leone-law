@@ -1,0 +1,3 @@
+# Article VIII
+1. This Convention shall be open until 31 December 1958 for signature on behalf of any member of the United Nations and also on behalf of any other State which is or hereafter becomes a member of any specialised agency of the United Nations, or which is or hereafter becomes a party to the Statute of the International Court of Justice, or any other State to which an invitation has been addressed by the General Assembly of the United Nations.
+2. This Convention shall be ratified and the instrument of ratification shall be deposited with the Secretary-General of the United Nations.
