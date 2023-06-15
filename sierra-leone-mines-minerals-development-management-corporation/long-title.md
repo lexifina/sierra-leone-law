@@ -1,0 +1,3 @@
+# Long title
+Being an Act to provide for the establishment of the Sierra Leone Mines and Minerals Development and Management Corporation which shall carry out, through a project company, minerals and mining development, management and related associated activities on behalf of the Republic of Sierra Leone, in accordance with the Mines and Minerals Development Act or any other Act, to provide for the promotion and facilitation of state participation and investment in mines and minerals development and to provide for other related matters.
+ENACTED by the President and Members of Parliament in this present Parliament assembled
