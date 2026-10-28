@@ -1,0 +1,10 @@
+{
+  "path": "sl",
+  "code": "SL",
+  "name": "Sierra Leone",
+  "level": "country",
+  "repo": "https://github.com/lexifina/sierra-leone-law",
+  "build": "scrape",
+  "register": "https://claude.ai/artifact/DdS9F6yqpPZtV2i7FGQhYZ",
+  "register_date": "2026-10-28"
+}
