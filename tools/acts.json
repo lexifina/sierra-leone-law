@@ -1,0 +1,78 @@
+{
+ "retrieved": "2026-10-28",
+ "common_crawl": false,
+ "lii": {
+  "name": "SierraLII",
+  "hosts": [
+   "sierralii.gov.sl",
+   "sierralii.org"
+  ],
+  "cc": "sl",
+  "path_prefixes": [
+   ""
+  ],
+  "listing_prefix": "",
+  "listing": false
+ },
+ "country": {
+  "code": "SL",
+  "name": "Sierra Leone",
+  "slug": "sierra-leone",
+  "lang": "en",
+  "tz": "Africa/Freetown",
+  "future_branch": "future",
+  "publisher": {
+   "name": "SierraLII",
+   "email": "sierralii@sierralii.invalid"
+  },
+  "default_in_force_rule": {
+   "text": "Constitution of Sierra Leone, 1991, s. 106(3): \"An Act signed by the President shall come into operation on the date of its publication in the Gazette or such other date as may be prescribed therein or in any other enactment.\" SierraLII versions keep SierraLII's own expression date (the Gazette publication of the act, or the commencement date SierraLII states).",
+   "source": "https://web.archive.org/web/20210814090237id_/https://www.parliament.gov.sl/uploads/other_resources/2-Sierra%20Leone%201991%20Constitution.pdf"
+  },
+  "licence_note": "Source: SierraLII (https://sierralii.gov.sl), licensed under the Creative Commons Attribution-NonCommercial 4.0 International licence (CC BY-NC 4.0)."
+ },
+ "sources": [
+  {
+   "name": "SierraLII (Sierra Leone Legal Information Institute, on the Laws.Africa Peachjam platform)",
+   "url": "https://sierralii.gov.sl",
+   "retrieved": "2026-10-28",
+   "requests": "count",
+   "licence": "CC BY-NC 4.0, crediting SierraLII as the source (https://sierralii.gov.sl/terms-of-use/, s. 9)",
+   "notes": "Acts as published, /akn/sl/act/<year>/<num>/eng@<date>. SierraLII holds one expression per act (no point-in-time consolidations). Each expression page is read from an archived copy (Internet Archive id_ capture; Common Crawl's index did not connect from this machine on 2026-10-28 or 2026-10-29), pinned in sources.json with its sha256; no SierraLII page, document or listing, was fetched directly. Request count covers every archive request."
+  },
+  {
+   "name": "Common Crawl and the Internet Archive Wayback Machine",
+   "url": "https://commoncrawl.org",
+   "retrieved": "2026-10-28",
+   "requests": null,
+   "licence": "Archived copies; the content licence is the original publisher's. Common Crawl data is used under its terms of use (https://commoncrawl.org/terms-of-use).",
+   "notes": "Every SierraLII page used was read from the Internet Archive (CDX index, then the raw id_ capture). Common Crawl's index did not connect from this machine (2026-10-28 and 2026-10-29), so no Common Crawl record is used; the Constitution's Parliament PDFs are Internet Archive copies too."
+  }
+ ],
+ "acts": [
+  {
+   "work": "2023/15",
+   "slug": "employment",
+   "short": "Employment Act 2023",
+   "title": "Employment Act, 2023",
+   "label": "Act 15 of 2023"
+  }
+ ],
+ "left_out": [
+  {
+   "work": "2021/7",
+   "slug": "cyber-security-and-crime",
+   "title": "Cyber Security and Crime Act, 2021",
+   "label": "Act 7 of 2021",
+   "reason": "SierraLII holds it only as a PDF (source.pdf, 11.5 MB), with no Akoma Ntoso text: all 18 archived captures of /akn/sl/act/2021/7/eng@2021-11-25 (2023-06 to 2026-05) show only the PDF viewer. Building it would need a PDF parser for that file (and a check that it has a text layer; no OCR)."
+  }
+ ],
+ "decisions": [
+  "SierraLII publishes about 80 acts (2026-10-28 listing), each as one expression: the act as published. It holds no consolidated point-in-time versions and not the Constitution of 1991, so each SierraLII act here has one version, credited to the act itself.",
+  "Licence and terms: SierraLII licenses primary and secondary law content CC BY-NC 4.0, crediting SierraLII as the source (terms s. 9); its terms (s. 4) say \"Scraping and bulk downloading from this website is strictly prohibited\"; its robots.txt sends Content-Signal ai-train=no, search=yes, ai-input=no and Crawl-delay 5. No SierraLII document page was fetched: every version is read from an archived copy (Common Crawl or the Internet Archive). The user decided on 2026-10-28 that reading archived copies is acceptable (relayed by the coordinator: \"scraping wayback is fair game, dont overdo it\"). The repository stays private; CC BY-NC allows only non-commercial use. No legal text was given to a model.",
+  "Cyber Security and Crime Act, 2021 (Act 7 of 2021) is not built: SierraLII holds it only as a PDF (source.pdf, 11.5 MB) with no Akoma Ntoso text; all 18 archived captures of its expression page (2023-06 to 2026-05) show only the PDF viewer."
+ ],
+ "ai_use": [
+  "Claude Code (Claude Opus 5.5, claude-opus-5-5) wrote the configuration and the Constitution replay script and chose the acts. No model wrote, summarised or transformed legal text: parse.py and constitution.py are deterministic code, and the amendment instructions are applied by code written for each instruction."
+ ]
+}

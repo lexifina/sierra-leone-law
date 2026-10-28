@@ -1,0 +1,57 @@
+{
+ "country": "SL",
+ "acts": [
+  {
+   "slug": "constitution",
+   "short": "Constitution",
+   "title": "The Constitution of Sierra Leone, 1991",
+   "url": "https://web.archive.org/web/20210814090237id_/https://www.parliament.gov.sl/uploads/other_resources/2-Sierra%20Leone%201991%20Constitution.pdf",
+   "versions": [
+    {
+     "from": "1991-10-01",
+     "units": 197,
+     "source_url": "https://web.archive.org/web/20210814090237id_/https://www.parliament.gov.sl/uploads/other_resources/2-Sierra%20Leone%201991%20Constitution.pdf",
+     "sha256": "6609ec0e5a303fb82075b8407695162c8279d2b3c74908df6b4a85424388506a"
+    },
+    {
+     "from": "2002-02-07",
+     "units": 198,
+     "source_url": "https://web.archive.org/web/20210813203802id_/https://www.parliament.gov.sl/uploads/acts/The%20Constitution%20of%20Sierra%20Leone%20(Amendment)%20Act,%202001.pdf",
+     "sha256": "7cbb4d73d5aaa078e9875fefa6420a820c8c11e8d22ba727c4cbe305afd3b73d"
+    },
+    {
+     "from": "2008-07-31",
+     "units": 198,
+     "source_url": "https://web.archive.org/web/20210813203436id_/https://www.parliament.gov.sl/uploads/acts/CONSTITUTION%20OF%20SIERRA%20LEONE%20AMENDMENT%20ACT%202008.pdf",
+     "sha256": "d63a9f14d41ee3c86245859495ade1703545afa2fd8bbdda38428962e3996508"
+    },
+    {
+     "from": "2014-01-09",
+     "units": 198,
+     "source_url": "https://web.archive.org/web/20240712030009id_/https://www.parliament.gov.sl/uploads/acts/The%20%20Constitution%20of%20Sierra%20Leone%20(Amendment)%20Act,%202013..pdf",
+     "sha256": "3a7d48f02e74d7cc46e49b8a6857810526de9b9e70bd68bc027e90b206a8c755"
+    },
+    {
+     "from": "2016-06-16",
+     "units": 198,
+     "source_url": "https://web.archive.org/web/20210813203135id_/https://www.parliament.gov.sl/uploads/acts/The%20Constitution%20of%20Sierra%20Leone%20(Amendment)%20Act,2016.pdf",
+     "sha256": "2f8bd47ba7c0155397befd294eacec76c3969059a041db1d3d03f0f2d37e7b5d"
+    }
+   ]
+  },
+  {
+   "slug": "employment",
+   "short": "Employment Act 2023",
+   "title": "Employment Act, 2023",
+   "url": "https://sierralii.gov.sl/akn/sl/act/2023/15",
+   "versions": [
+    {
+     "from": "2023-05-11",
+     "units": 118,
+     "source_url": "https://web.archive.org/web/20260711081915id_/https://sierralii.gov.sl/akn/sl/act/2023/15/eng@2023-05-11",
+     "sha256": "65fc01f8052c0ede0ed72bc39d620d9aed9c6a22f85515f97e0825b068faaf59"
+    }
+   ]
+  }
+ ]
+}
