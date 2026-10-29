@@ -1,0 +1,22 @@
+{
+ "parts": {
+  "20-sierralii.json": {
+   "acts": [
+    "employment"
+   ],
+   "sha256": "9ebf87f80c7b968cad16cd95fa5436eaa71a5a456decdc2bc563cfc2c854558f"
+  },
+  "30-acts.json": {
+   "acts": [
+    "anti-human-trafficking",
+    "banking",
+    "customary-land-rights",
+    "cyber-security-crime",
+    "national-investment-board",
+    "national-land-commission"
+   ],
+   "sha256": "5141578712eb131fbec5719d7dc263566297b75d1ea74f1611ab6bbb0d15a742"
+  }
+ },
+ "schema": 1
+}
