@@ -1,0 +1,103 @@
+{
+ "country": "SL",
+ "acts": [
+  {
+   "slug": "employment",
+   "short": "Employment Act 2023",
+   "title": "Employment Act, 2023",
+   "url": "https://sierralii.gov.sl/akn/sl/act/2023/15",
+   "versions": [
+    {
+     "from": "2023-05-11",
+     "units": 118,
+     "source_url": "https://web.archive.org/web/20260711081915id_/https://sierralii.gov.sl/akn/sl/act/2023/15/eng@2023-05-11",
+     "sha256": "65fc01f8052c0ede0ed72bc39d620d9aed9c6a22f85515f97e0825b068faaf59"
+    }
+   ]
+  },
+  {
+   "slug": "cyber-security-crime",
+   "short": "Cyber Security and Crime Act 2021",
+   "title": "The Cyber Security and Crime Act, 2021",
+   "url": "https://www.parliament.gov.sl/uploads/acts/THE%20CYBER%20SECURITY%20AND%20CRIME%20ACT,%202021.pdf",
+   "versions": [
+    {
+     "from": "2021-11-25",
+     "units": 58,
+     "source_url": "https://web.archive.org/web/20220301205224id_/https://www.parliament.gov.sl/uploads/acts/THE%20CYBER%20SECURITY%20AND%20CRIME%20ACT,%202021.pdf",
+     "sha256": "bdee8bf9347c27717745a2aafaf8699d0ec8c7f81f030500cdf29bc52fbfa4e2"
+    }
+   ]
+  },
+  {
+   "slug": "customary-land-rights",
+   "short": "Customary Land Rights Act 2022",
+   "title": "The Customary Land Rights Act, 2022",
+   "url": "https://www.parliament.gov.sl/uploads/acts/THE%20CUSTOMARY%20LAND%20RIGHTS%20ACT,%202022.pdf",
+   "versions": [
+    {
+     "from": "2022-09-23",
+     "units": 49,
+     "source_url": "https://web.archive.org/web/20221122071344id_/https://www.parliament.gov.sl/uploads/acts/THE%20CUSTOMARY%20LAND%20RIGHTS%20ACT,%202022.pdf",
+     "sha256": "fe22bda8b343067624f94c2283aaf4db4cea3096f8d8f3fbd34e5e7098acf37f"
+    }
+   ]
+  },
+  {
+   "slug": "national-land-commission",
+   "short": "National Land Commission Act 2022",
+   "title": "The National Land Commission Act, 2022",
+   "url": "https://www.parliament.gov.sl/uploads/acts/THE%20NATIONAL%20LAND%20COMMISSION%20ACT,%202022.pdf",
+   "versions": [
+    {
+     "from": "2022-09-23",
+     "units": 91,
+     "source_url": "https://web.archive.org/web/20221122074945id_/https://www.parliament.gov.sl/uploads/acts/THE%20NATIONAL%20LAND%20COMMISSION%20ACT,%202022.pdf",
+     "sha256": "2677dd8868b3378f95ba33fa2986791d9778fb557882ba50083d8055f62f2788"
+    }
+   ]
+  },
+  {
+   "slug": "anti-human-trafficking",
+   "short": "Anti-Human Trafficking and Migrant Smuggling Act 2022",
+   "title": "The Anti-Human Trafficking and Migrant Smuggling Act, 2022",
+   "url": "https://www.parliament.gov.sl/uploads/acts/ANTI-HUMAN%20TRAFFICKIING%20AND%20MIGRANT%20ACT,2022.pdf",
+   "versions": [
+    {
+     "from": "2022-07-21",
+     "units": 39,
+     "source_url": "https://web.archive.org/web/20221122080341id_/https://www.parliament.gov.sl/uploads/acts/ANTI-HUMAN%20TRAFFICKIING%20AND%20MIGRANT%20ACT,2022.pdf",
+     "sha256": "f52888c3ae5ec4cbb63720e801395574c549aefd6012b3eb0a18d58a02022435"
+    }
+   ]
+  },
+  {
+   "slug": "banking",
+   "short": "Banking Act 2019",
+   "title": "The Banking Act, 2019",
+   "url": "https://www.parliament.gov.sl/uploads/acts/THE%20BANKING%20ACT%202019.pdf",
+   "versions": [
+    {
+     "from": "2019-06-27",
+     "units": 125,
+     "source_url": "https://web.archive.org/web/20210813203029id_/https://www.parliament.gov.sl/uploads/acts/THE%20BANKING%20ACT%202019.pdf",
+     "sha256": "78f8b804316ff1a2e4b2f477ac7892c90525d56dde9693bd37a5ba3e69f76c52"
+    }
+   ]
+  },
+  {
+   "slug": "national-investment-board",
+   "short": "National Investment Board Act 2022",
+   "title": "The National Investment Board Act, 2022",
+   "url": "https://www.parliament.gov.sl/uploads/acts/THE%20NATIONAL%20INVESTMENT%20BOARD%20ACT%202022.pdf",
+   "versions": [
+    {
+     "from": "2022-07-14",
+     "units": 53,
+     "source_url": "https://web.archive.org/web/20221122075106id_/https://www.parliament.gov.sl/uploads/acts/THE%20NATIONAL%20INVESTMENT%20BOARD%20ACT%202022.pdf",
+     "sha256": "62549e8aeeb6bd257a2d056a334eeaed4cae2a4c4e6baf7887c7200a541d5377"
+    }
+   ]
+  }
+ ]
+}
