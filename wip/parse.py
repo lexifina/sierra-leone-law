@@ -136,7 +136,13 @@ def main() -> None:
     (HERE / "verification.json").write_text(json.dumps(report, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     repo = HERE / "repo"
     repo.mkdir(exist_ok=True)
-    files = {"README.md": readme(country, laws, acts, missing), "LICENSE": peachjam.licence(HERE)}
+    lic = peachjam.licence(HERE).replace("point-in-time versions of each act, read", "acts as published, read")
+    lic += ("\nThe Constitution of Sierra Leone, 1991 and its amending Acts (folder constitution/) come from the\n"
+            "Parliament of Sierra Leone, https://www.parliament.gov.sl, read from Internet Archive copies of its PDFs.\n"
+            "They are Acts of Parliament; parliament.gov.sl states no licence. The 1991 text and the 2001 amending Act\n"
+            "are Sierra Leone Web (https://www.sierra-leone.org) transcriptions published by Parliament. Lexifina\n"
+            "applied each amending Act's instructions to the text before it; the wording of each Act was not changed.\n")
+    files = {"README.md": readme(country, laws, acts, missing), "LICENSE": lic}
     j = repo / "jurisdiction.json"
     if j.exists():
         jd = json.loads(j.read_text(encoding="utf-8"))
