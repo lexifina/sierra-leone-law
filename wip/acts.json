@@ -1,10 +1,16 @@
 {
  "retrieved": "2026-10-28",
+ "common_crawl": false,
  "lii": {
   "name": "SierraLII",
-  "hosts": ["sierralii.gov.sl", "sierralii.org"],
+  "hosts": [
+   "sierralii.gov.sl",
+   "sierralii.org"
+  ],
   "cc": "sl",
-  "path_prefixes": [""],
+  "path_prefixes": [
+   ""
+  ],
   "listing_prefix": ""
  },
  "country": {
@@ -14,7 +20,10 @@
   "lang": "en",
   "tz": "Africa/Freetown",
   "future_branch": "future",
-  "publisher": {"name": "SierraLII", "email": "sierralii@sierralii.invalid"},
+  "publisher": {
+   "name": "SierraLII",
+   "email": "sierralii@sierralii.invalid"
+  },
   "default_in_force_rule": {
    "text": "Constitution of Sierra Leone, 1991, s. 106(3): \"An Act signed by the President shall come into operation on the date of its publication in the Gazette or such other date as may be prescribed therein or in any other enactment.\" SierraLII versions keep SierraLII's own expression date (the Gazette publication of the act, or the commencement date SierraLII states).",
    "source": "https://web.archive.org/web/20210814090237id_/https://www.parliament.gov.sl/uploads/other_resources/2-Sierra%20Leone%201991%20Constitution.pdf"
@@ -40,8 +49,20 @@
   }
  ],
  "acts": [
-  {"work": "2023/15", "slug": "employment", "short": "Employment Act 2023", "title": "Employment Act, 2023", "label": "Act 15 of 2023"},
-  {"work": "2021/7", "slug": "cyber-security-and-crime", "short": "Cyber Security and Crime Act 2021", "title": "Cyber Security and Crime Act, 2021", "label": "Act 7 of 2021"}
+  {
+   "work": "2023/15",
+   "slug": "employment",
+   "short": "Employment Act 2023",
+   "title": "Employment Act, 2023",
+   "label": "Act 15 of 2023"
+  },
+  {
+   "work": "2021/7",
+   "slug": "cyber-security-and-crime",
+   "short": "Cyber Security and Crime Act 2021",
+   "title": "Cyber Security and Crime Act, 2021",
+   "label": "Act 7 of 2021"
+  }
  ],
  "decisions": [
   "SierraLII publishes about 80 acts (2026-10-28 listing), each as one expression: the act as published. It holds no consolidated point-in-time versions and not the Constitution of 1991, so each SierraLII act here has one version, credited to the act itself.",
