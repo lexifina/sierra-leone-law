@@ -11,7 +11,8 @@
   "path_prefixes": [
    ""
   ],
-  "listing_prefix": ""
+  "listing_prefix": "",
+  "listing": false
  },
  "country": {
   "code": "SL",
@@ -37,7 +38,7 @@
    "retrieved": "2026-10-28",
    "requests": "count",
    "licence": "CC BY-NC 4.0, crediting SierraLII as the source (https://sierralii.gov.sl/terms-of-use/, s. 9)",
-   "notes": "Acts as published, /akn/sl/act/<year>/<num>/eng@<date>. SierraLII holds one expression per act (no point-in-time consolidations). Each expression page is read from an archived copy (Common Crawl WARC record or Internet Archive id_ capture), pinned in sources.json with its sha256; no SierraLII document page was fetched directly. Its open legislation listing was read directly. Request count covers every archive and listing request."
+   "notes": "Acts as published, /akn/sl/act/<year>/<num>/eng@<date>. SierraLII holds one expression per act (no point-in-time consolidations). Each expression page is read from an archived copy (Internet Archive id_ capture; Common Crawl's index did not connect from this machine on 2026-10-28 or 2026-10-29), pinned in sources.json with its sha256; no SierraLII page, document or listing, was fetched directly. Request count covers every archive request."
   },
   {
    "name": "Common Crawl and the Internet Archive Wayback Machine",
@@ -45,7 +46,7 @@
    "retrieved": "2026-10-28",
    "requests": null,
    "licence": "Archived copies; the content licence is the original publisher's. Common Crawl data is used under its terms of use (https://commoncrawl.org/terms-of-use).",
-   "notes": "Common Crawl index + byte-range reads of WARC records first; archive.org CDX and id_ captures for what Common Crawl lacks."
+   "notes": "Every SierraLII page used was read from the Internet Archive (CDX index, then the raw id_ capture). Common Crawl's index did not connect from this machine (2026-10-28 and 2026-10-29), so no Common Crawl record is used; the Constitution's Parliament PDFs are Internet Archive copies too."
   }
  ],
  "acts": [
@@ -55,18 +56,21 @@
    "short": "Employment Act 2023",
    "title": "Employment Act, 2023",
    "label": "Act 15 of 2023"
-  },
+  }
+ ],
+ "left_out": [
   {
    "work": "2021/7",
    "slug": "cyber-security-and-crime",
-   "short": "Cyber Security and Crime Act 2021",
    "title": "Cyber Security and Crime Act, 2021",
-   "label": "Act 7 of 2021"
+   "label": "Act 7 of 2021",
+   "reason": "SierraLII holds it only as a PDF (source.pdf, 11.5 MB), with no Akoma Ntoso text: all 18 archived captures of /akn/sl/act/2021/7/eng@2021-11-25 (2023-06 to 2026-05) show only the PDF viewer. Building it would need a PDF parser for that file (and a check that it has a text layer; no OCR)."
   }
  ],
  "decisions": [
   "SierraLII publishes about 80 acts (2026-10-28 listing), each as one expression: the act as published. It holds no consolidated point-in-time versions and not the Constitution of 1991, so each SierraLII act here has one version, credited to the act itself.",
-  "Licence and terms: SierraLII licenses primary and secondary law content CC BY-NC 4.0, crediting SierraLII as the source (terms s. 9); its terms (s. 4) say \"Scraping and bulk downloading from this website is strictly prohibited\"; its robots.txt sends Content-Signal ai-train=no, search=yes, ai-input=no and Crawl-delay 5. No SierraLII document page was fetched: every version is read from an archived copy (Common Crawl or the Internet Archive). The user decided on 2026-10-28 that reading archived copies is acceptable (relayed by the coordinator: \"scraping wayback is fair game, dont overdo it\"). The repository stays private; CC BY-NC allows only non-commercial use. No legal text was given to a model."
+  "Licence and terms: SierraLII licenses primary and secondary law content CC BY-NC 4.0, crediting SierraLII as the source (terms s. 9); its terms (s. 4) say \"Scraping and bulk downloading from this website is strictly prohibited\"; its robots.txt sends Content-Signal ai-train=no, search=yes, ai-input=no and Crawl-delay 5. No SierraLII document page was fetched: every version is read from an archived copy (Common Crawl or the Internet Archive). The user decided on 2026-10-28 that reading archived copies is acceptable (relayed by the coordinator: \"scraping wayback is fair game, dont overdo it\"). The repository stays private; CC BY-NC allows only non-commercial use. No legal text was given to a model.",
+  "Cyber Security and Crime Act, 2021 (Act 7 of 2021) is not built: SierraLII holds it only as a PDF (source.pdf, 11.5 MB) with no Akoma Ntoso text; all 18 archived captures of its expression page (2023-06 to 2026-05) show only the PDF viewer."
  ],
  "ai_use": [
   "Claude Code (Claude Opus 5.5, claude-opus-5-5) wrote the configuration and the Constitution replay script and chose the acts. No model wrote, summarised or transformed legal text: parse.py and constitution.py are deterministic code, and the amendment instructions are applied by code written for each instruction."

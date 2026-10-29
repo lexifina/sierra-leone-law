@@ -91,7 +91,9 @@ def readme(c: dict, laws: dict, acts: list, missing: list[str]) -> str:
           "- Constitution: the 1991 parse keeps every character of the source's body text (page heads, the "
           "Arrangement of Sections, and chapter and part headings aside); each replayed amendment changes exactly the "
           "provisions its Act names.",
-          "- SierraLII acts: the last version is the expression SierraLII's own listing names as current.", "",
+          "- SierraLII acts: the Internet Archive's index of every archived SierraLII page holds exactly one expression "
+          "of each act (SierraLII's listing itself is not read: only archived copies are), and that expression is "
+          "the version here.", "",
           "## Licence", "",
           f"- SierraLII content: {cc['licence_note']} The repository is private: CC BY-NC 4.0 allows only "
           "non-commercial use.",

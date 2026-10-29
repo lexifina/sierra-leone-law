@@ -1,12 +1,39 @@
 {
- "check": {
-  "acts": 1,
-  "backwards": 0,
-  "future_dated": 0,
-  "merges": 0,
-  "mismatches": 0,
-  "missing_in_force": 0,
-  "trailer_errors": 0,
-  "versions": 5
+ "acts": {
+  "employment": [
+   {
+    "changed": 0,
+    "credited": 0,
+    "from": "2023-05-11",
+    "units": 118
+   }
+  ],
+  "employment:archive": {
+   "captured": "20260711081915",
+   "history_after_last": [],
+   "last_version": "2023-05-11",
+   "via": "wayback"
+  }
+ },
+ "fidelity": {
+  "employment@2023-05-11": {
+   "text_outside_units_chars": 0,
+   "text_outside_units_sample": "",
+   "units": 118,
+   "units_differing": []
+  }
+ },
+ "law_dates": {
+  "act-2023-15": {
+   "commenced": null,
+   "dated": []
+  }
+ },
+ "rebuild": {
+  "commits": 1,
+  "history_tip": "b1013885ba9425ba4eb3e9fb5aaae07e531e4fd2",
+  "identical": true,
+  "main_identical": true,
+  "tags": 2
  }
 }

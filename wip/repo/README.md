@@ -9,6 +9,7 @@ It follows the shared design of [lexifina/global-law](https://github.com/lexifin
 | Folder | Act | Versions | History | Source |
 | --- | --- | ---: | --- | --- |
 | `constitution/` | [The Constitution of Sierra Leone, 1991](https://web.archive.org/web/20210814090237id_/https://www.parliament.gov.sl/uploads/other_resources/2-Sierra%20Leone%201991%20Constitution.pdf) | 5 | 1991-10-01 to 2016-06-16 | Parliament of Sierra Leone PDFs, replayed |
+| `employment/` | [Employment Act, 2023](https://sierralii.gov.sl/akn/sl/act/2023/15) | 1 | 2023-05-11 to 2023-05-11 | SierraLII |
 
 **The Constitution of Sierra Leone, 1991**
 
@@ -19,6 +20,12 @@ It follows the shared design of [lexifina/global-law](https://github.com/lexifin
 | 2008-07-31 | Act No. 9 of 2008 |
 | 2014-01-09 | Act No. 5 of 2013 |
 | 2016-06-16 | Act No. 10 of 2016 |
+
+**Employment Act, 2023**
+
+| In force | Author |
+| --- | --- |
+| 2023-05-11 | Act 15 of 2023 (as enacted) |
 
 ## Sources
 
@@ -52,7 +59,7 @@ It follows the shared design of [lexifina/global-law](https://github.com/lexifin
 
 - Every version is read back from git on the day it took effect and on the day before (`tools/check_repo.py`); both must match `corpus.json`. Results are in `REPRODUCE.md`.
 - Constitution: the 1991 parse keeps every character of the source's body text (page heads, the Arrangement of Sections, and chapter and part headings aside); each replayed amendment changes exactly the provisions its Act names.
-- SierraLII acts: the last version is the expression SierraLII's own listing names as current.
+- SierraLII acts: the Internet Archive's index of every archived SierraLII page holds exactly one expression of each act (SierraLII's listing itself is not read: only archived copies are), and that expression is the version here.
 
 ## Licence
 
