@@ -1,84 +1,86 @@
 # Sierra Leone: law history in git
 
+The law of Sierra Leone as a git history: one file per section (or schedule), one commit per version on the day it took effect, and the law that made each change as the commit's author. `git blame` names the law behind every paragraph; `git log` lists every change to a section; picking a date gives the text in force that day.
+
 Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Sierra Leone's national law, which global-law reads at `sierra-leone/national/acts/`.
 
-The law of Sierra Leone as a git history: one file per provision, one commit per law on the day it took effect, and the law that made each change as the commit's author. `git blame` names the law behind every paragraph; `git log` lists every change to a provision; `tools/on.py` gives the text in force on any day.
+**What is in it now:** 7 acts, each with one version, the Act as enacted, from 2019 to 2023: the Employment Act, 2023 from SierraLII, and six Acts as printed by the Government Printing Department: the Banking Act, 2019, the Cyber Security and Crime Act, 2021, and the National Investment Board, Anti-Human Trafficking and Migrant Smuggling, Customary Land Rights and National Land Commission Acts, 2022. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source; [`data/laws.csv`](data/laws.csv) gives each one's enacted, published and in-force days.
 
-It follows the shared design of [lexifina/global-law](https://github.com/lexifina/global-law), which places it at `sl/`.
+Each act is a folder, one file per provision, plus a `README.md` listing its provisions (`employment/sec-071.md` is section 71 of the Employment Act, 2023, Act 15 of 2023: annual leave).
 
-**What is in it now**
+The text is in English, the language Sierra Leone's laws are published in, as SierraLII and the Government Printing Department print it.
 
-| Folder | Act | Versions | History | Source |
-| --- | --- | ---: | --- | --- |
-| `constitution/` | [The Constitution of Sierra Leone, 1991](https://web.archive.org/web/20210814090237id_/https://www.parliament.gov.sl/uploads/other_resources/2-Sierra%20Leone%201991%20Constitution.pdf) | 5 | 1991-10-01 to 2016-06-16 | Parliament of Sierra Leone PDFs, replayed |
-| `employment/` | [Employment Act, 2023](https://sierralii.gov.sl/akn/sl/act/2023/15) | 1 | 2023-05-11 to 2023-05-11 | SierraLII |
-| `banking/` | [The Banking Act, 2019](https://www.parliament.gov.sl/uploads/acts/THE%20BANKING%20ACT%202019.pdf) | 1 | 2019-06-27 to 2019-06-27 | Government Printing Department print (Parliament of Sierra Leone) |
-| `cyber-security-crime/` | [The Cyber Security and Crime Act, 2021](https://www.parliament.gov.sl/uploads/acts/THE%20CYBER%20SECURITY%20AND%20CRIME%20ACT,%202021.pdf) | 1 | 2021-11-25 to 2021-11-25 | Government Printing Department print (Parliament of Sierra Leone) |
-| `customary-land-rights/` | [The Customary Land Rights Act, 2022](https://www.parliament.gov.sl/uploads/acts/THE%20CUSTOMARY%20LAND%20RIGHTS%20ACT,%202022.pdf) | 1 | 2022-09-23 to 2022-09-23 | Government Printing Department print (Parliament of Sierra Leone) |
-| `national-land-commission/` | [The National Land Commission Act, 2022](https://www.parliament.gov.sl/uploads/acts/THE%20NATIONAL%20LAND%20COMMISSION%20ACT,%202022.pdf) | 1 | 2022-09-23 to 2022-09-23 | Government Printing Department print (Parliament of Sierra Leone) |
-| `anti-human-trafficking/` | [The Anti-Human Trafficking and Migrant Smuggling Act, 2022](https://www.parliament.gov.sl/uploads/acts/ANTI-HUMAN%20TRAFFICKIING%20AND%20MIGRANT%20ACT,2022.pdf) | 1 | 2022-07-21 to 2022-07-21 | Government Printing Department print (Parliament of Sierra Leone) |
-| `national-investment-board/` | [The National Investment Board Act, 2022](https://www.parliament.gov.sl/uploads/acts/THE%20NATIONAL%20INVESTMENT%20BOARD%20ACT%202022.pdf) | 1 | 2022-07-14 to 2022-07-14 | Government Printing Department print (Parliament of Sierra Leone) |
-
-**The Constitution of Sierra Leone, 1991**
-
-| In force | Author |
-| --- | --- |
-| 1991-10-01 | Act No. 6 of 1991 (as enacted) |
-| 2002-02-07 | Act No. 15 of 2001 |
-| 2008-07-31 | Act No. 9 of 2008 |
-| 2014-01-09 | Act No. 5 of 2013 |
-| 2016-06-16 | Act No. 10 of 2016 |
-
-**Employment Act, 2023**
-
-| In force | Author |
-| --- | --- |
-| 2023-05-11 | Act 15 of 2023 (as enacted) |
-
-## Sources
-
-The Banking Act, 2019, the Cyber Security and Crime Act, 2021 and four Acts of 2022 (Customary Land Rights, National Land Commission, Anti-Human Trafficking and Migrant Smuggling, National Investment Board) are each the Act as passed and signed, read from the Government Printing Department's print that the Parliament of Sierra Leone publishes (text layer, no OCR). Each is in force from its publication in the Gazette, since its date of commencement is left blank (Constitution, s. 106(3)). No amending Act to any of them appears in Parliament's lists of Acts and Bills, so each text is taken as today's text; the annual Finance Acts were not read word for word.
-
-- **The Constitution** is not on SierraLII, and no consolidated, dated text of it is published anywhere we could read. Its history is rebuilt from the Parliament of Sierra Leone's own PDFs (parliament.gov.sl, which publishes the Constitution as enacted and the amending Acts with a text layer): each amending Act's instructions are applied by code to the text before it, and the new wording is read from the Act's own PDF. Each PDF is read from its Internet Archive copy, pinned by capture time and sha256. The 1991 text and the 2001 Act are Sierra Leone Web (sierra-leone.org) transcriptions that Parliament publishes.
-- **Other acts** are SierraLII's (Sierra Leone Legal Information Institute, on the Laws.Africa Peachjam platform). SierraLII publishes about 80 acts, each as one expression, the act as published; it has no point-in-time consolidations. Each page is read from an archived copy, pinned in `tools/sources.json`.
-
-## What is missing
-
-- Constitution: the Constitution of Sierra Leone (Amendment) Act, 2022 (Act No. 22 of 2022, Gazette of 22 December 2022; Political Parties Regulation Commission, ss. 34 and 35): its only copy is a scan whose OCR layer is unusable, and no OCR is done here.
-- Constitution: a Constitution of Sierra Leone (Amendment) Act, 2022 amending s. 32(2) and (8) (Electoral Commission): its only copy is an unnumbered, undated print, so no in-force date can be sourced.
-- Constitution: the Constitution of Sierra Leone Amendment Decree, 1997 and the Constitution Reinstatement (1996): scans only. The suspension of the Constitution under military rule is not recorded.
-- Constitution: because of these, its last version (2016) is not today's text; the Constitution is on the `preview` branch only.
-- SierraLII acts: one version each (the act as published); later amendments are not on SierraLII.
-
-## Dates
-
-- Each commit is dated at **noon, Africa/Freetown, on the day the change took effect**; the day is also in the `In-force:` trailer, which the tools read.
-- An Act of Parliament comes into operation on its publication in the Gazette, or on the date it prescribes (Constitution, s. 106(3)). Each Constitution version is dated by the amending Act's stated commencement or, where the Act leaves it blank, its Gazette date; the Constitution itself commenced on 1 October 1991 (s. 192). SierraLII acts are dated by SierraLII's expression date or its stated commencement.
-- `--before="YYYY-MM-DD"` alone uses your clock's time of day; use `T23:59:59Z`, or the tool.
-
-## A lawyer's questions as git commands
+## Questions as git commands
 
 | Question | Command |
 | --- | --- |
-| What did section 38 say on 2010-01-01? | `python tools/on.py 2010-01-01 constitution sec-038` |
-| Which law wrote each line? | `git blame constitution/sec-079.md` |
-| Every change, word by word | `git log -p --word-diff constitution/sec-038.md` |
-| Every law in the record, in order | `git log --reverse --format="%ad %an" --date=short main` |
-| Everything one law changed | `git show law/<key>` |
+| Every change to section 71 of the Employment Act | `git log -p --word-diff -- employment/sec-071.md` |
+| Which law wrote each line of section 71? | `git blame employment/sec-071.md` |
+| Every version of the Employment Act, with the day each took effect | `git log --format="%h %(trailers:key=In-force,valueonly,separator=) %an" -- employment ':!*/README.md'` |
+| Section 71 as in force on 1 January 2024 | `python tools/on.py 2024-01-01 employment sec-071` |
+
+**Outside git**, we also host this record publicly, for free:
+
+- **[Ask Claude about Sierra Leonean law](https://global-law.lexifina.com/v1/try_claude?country=sierra-leone)**: opens Claude with a first question ready.
+- **[Ask ChatGPT](https://global-law.lexifina.com/v1/try_chatgpt?country=sierra-leone)**: the same question in ChatGPT.
+- **[Call the API in your browser](https://global-law.lexifina.com/v1/search_law?query=annual+leave&jurisdictions=sierra-leone)**: a search of Sierra Leonean law for "annual leave", returned as JSON. See the [documentation here](https://lexifina.com/api/global-law).
+
+Both assistants read the record through the free Global law connector (MCP, `https://global-law.lexifina.com/mcp`); the first time, the chat gives you the link that adds it. Ask in English.
+
+**Host it yourself easily.** All it takes is git and Python, and the tools run on your machine:
+
+```sh
+git clone --depth 1 https://github.com/lexifina/global-law && cd global-law
+python3 tools/countries.py add sierra-leone/national/acts
+python3 tools/law.py show 2026-01-01 sierra-leone/national/acts/employment/sec-071.md
+```
+
+Opened in Claude Code, Cursor, VS Code or Codex, the clone also starts a local MCP server with the same tools ([MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md)).
+
+## Dates
+
+Each commit is dated at noon, Africa/Freetown, on the day the version took effect, and carries it in its `In-force:` trailer:
+
+- an Act comes into operation on its publication in the Gazette, or on the date it prescribes (Constitution of Sierra Leone, 1991, s. 106(3));
+- the six printed Acts leave their date of commencement blank, so each is dated by its Gazette (the Banking Act, 2019: Gazette No. 51 of 27 June 2019);
+- the Employment Act, 2023 is dated by SierraLII's own date for it, its publication on 11 May 2023.
+
+Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierralii.invalid>`; the Cyber Security and Crime Act, 2021 by its title), with an e-mail address that cannot exist, so `git blame` and `git log --author` name laws. The committer is always Lexifina.
 
 ## How it is checked
 
-- Every version is read back from git on the day it took effect and on the day before (`tools/check_repo.py`); both must match `corpus.json`. Results are in `REPRODUCE.md`.
-- Constitution: the 1991 parse keeps every character of the source's body text (page heads, the Arrangement of Sections, and chapter and part headings aside); each replayed amendment changes exactly the provisions its Act names.
-- SierraLII acts: the Internet Archive's index of every archived SierraLII page holds exactly one expression of each act (SierraLII's listing itself is not read: only archived copies are), and that expression is the version here.
+- `tools/check_repo.py` reads every version back from git on the day it took effect and on the day before, and compares it with the corpus: 7 versions of 7 acts, 0 mismatches, and no commit whose trailers git cannot parse (see [`REPRODUCE.md`](REPRODUCE.md)).
+- Every printed word of the six Acts, from the enacting formula to "Passed in Parliament", is in a provision file, a Part heading or the printer's colophon, and none is added; the Employment Act's text, except headings and editorial notes, is checked to be in a provision file.
+- A second build from the same corpus gave the same hashes for all 7 history commits and 14 tags.
+- History is append-only: no merge commits, no commit dates that go backwards, and none after the build.
+
+## What it does not show
+
+- **Most Sierra Leonean law.** Only these 7 acts are here (SierraLII alone publishes about 80); there is no subordinate legislation, case law or bill.
+- **Amendments.** Each act is held as enacted. No amending Act to the six printed Acts appears in Parliament's lists of Acts and Bills, but the annual Finance Acts were not read word for word; SierraLII holds no later version of the Employment Act.
+- **The Constitution.** Its history from 1991 to 2016 (5 versions) is on the `preview` branch only: two Constitution (Amendment) Acts of 2022 have no usable text (a scan with an unusable OCR layer, an undated print), so its last version is not today's text.
+- **Headings.** Part, Chapter and Division headings and SierraLII's editorial notes are left out; misspellings in the prints are kept as printed.
+
+## Sources
+
+| Source | Kind | Past versions | Notes |
+| --- | --- | --- | --- |
+| [Parliament of Sierra Leone](https://www.parliament.gov.sl) | Acts as passed and signed, printed by the Government Printing Department | no, the Act as enacted | Six Acts, read from the PDFs' text layer (no OCR), each from an Internet Archive copy |
+| [SierraLII](https://sierralii.gov.sl) (Sierra Leone Legal Information Institute, on Laws.Africa's Peachjam) | Acts as published | no, one expression per act | The Employment Act, 2023, read from an archived copy pinned in `tools/sources.json` |
 
 ## Licence
 
-- SierraLII content: Source: SierraLII (https://sierralii.gov.sl), licensed under the Creative Commons Attribution-NonCommercial 4.0 International licence (CC BY-NC 4.0). The repository is private: CC BY-NC 4.0 allows only non-commercial use.
-- Acts of Parliament from parliament.gov.sl: no licence is stated there; they are public legislation.
+See [`LICENSE`](LICENSE). SierraLII licenses its content under CC BY-NC 4.0, crediting SierraLII as the source (its terms of use, section 9), so its texts may be used only for non-commercial purposes; parliament.gov.sl states no licence for the Acts it publishes. Lexifina's own contributions (the arrangement of the history, the commit messages, the tables and the tools) are CC0 1.0.
 
-## What "author" means
+No AI model wrote, translated or corrected legal text, and none runs when the history is built; the scripts were written by an AI model (see [`REPRODUCE.md`](REPRODUCE.md)).
 
-The author of a commit is the law that made the change, with an e-mail address that cannot exist, so `git blame` and `git log --author` name laws. The committer is always Lexifina.
+## More
 
-This repository is not legal advice.
+From [lexifina/global-law](https://github.com/lexifina/global-law):
+
+- [FEATURES.md](https://github.com/lexifina/global-law/blob/main/FEATURES.md): every feature, and what every corpus must support (`git blame`, `law.py`, the MCP tools)
+- [FAQ.md](https://github.com/lexifina/global-law/blob/main/FAQ.md): questions and answers · [CONTRIBUTING.md](https://github.com/lexifina/global-law/blob/main/CONTRIBUTING.md): proposing changes · [MCP.md](https://github.com/lexifina/global-law/blob/main/MCP.md): the MCP server · [REPRODUCE.md](https://github.com/lexifina/global-law/blob/main/REPRODUCE.md): how it was built · [CHANGELOG.md](https://github.com/lexifina/global-law/blob/main/CHANGELOG.md)
+- [FRESHNESS.md](https://github.com/lexifina/global-law/blob/main/FRESHNESS.md): how current each corpus is · [Monitoring](https://github.com/lexifina/global-law/tree/main/monitoring): whether updates are running · [WATCHING.md](https://github.com/lexifina/global-law/blob/main/WATCHING.md): how each official source is watched for changes
+- [performance/](https://github.com/lexifina/global-law/tree/main/performance): how fast the tools are, measured
+- [visualisations/](https://github.com/lexifina/global-law/tree/main/visualisations): charts and bridges across the world's law
+- [Vulnerabilities](https://github.com/lexifina/global-law/tree/main/vulnerabilities): mistakes in legislation as published
