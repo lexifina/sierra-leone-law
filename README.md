@@ -59,6 +59,7 @@ Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierra
 - Every printed word of the six Acts, from the enacting formula to "Passed in Parliament", is in a provision file, a Part heading or the printer's colophon, and none is added; the Employment Act's text, except headings and editorial notes, is checked to be in a provision file.
 - A second build from the same corpus gave the same hashes for all 7 history commits and 14 tags.
 - History is append-only: no merge commits, no commit dates that go backwards, and none after the build.
+- [vulnerabilities/](vulnerabilities/): possible drafting mistakes in this law, found by global-law's detectors and checked by hand. Not run yet.
 
 ## What it does not show
 
@@ -79,6 +80,10 @@ Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierra
 See [`LICENSE`](LICENSE). SierraLII licenses its content under CC BY-NC 4.0, crediting SierraLII as the source (its terms of use, section 9), so its texts may be used only for non-commercial purposes; parliament.gov.sl states no licence for the Acts it publishes. Lexifina's own contributions (the arrangement of the history, the commit messages, the tables and the tools) are CC0 1.0.
 
 No AI model wrote, translated or corrected legal text, and none runs when the history is built; the scripts were written by an AI model (see [`REPRODUCE.md`](REPRODUCE.md)).
+
+## Visualisations
+
+- [visualisations/](visualisations/): charts drawn from this repository. Not drawn yet.
 
 ## More
 
