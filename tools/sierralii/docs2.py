@@ -105,7 +105,7 @@ p.write_text(t, "utf8", newline="\n")
 
 lic = repo / "LICENSE"
 L = lic.read_text("utf8")
-if "Sierra Leone Web (https://www.sierra-leone.org/laws.html)" not in L:
+if "Acts marked Source-status" not in L:
     L = L.rstrip("\n") + "\n\nActs marked Source-status: secondary copy come from Sierra Leone Web\n" \
         "(https://www.sierra-leone.org/laws.html), an independent site that has collected copies of the\n" \
         "Government Printing Department prints since 1996. They are Acts of Parliament; the site states no\n" \
