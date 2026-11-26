@@ -196,7 +196,7 @@ as `build_leg.py`, and these rules:
 - an Act in force before 1970 is stamped 1970-01-01 (git cannot store earlier dates), with its real day in the
   subject and the `In-force` trailer.
 
-Committed: 65 Acts (11 Parliament, 54 Sierra Leone Web, 12 of them from a publisher's OCR layer):
+Committed: 67 Acts (13 Parliament, 54 Sierra Leone Web, 12 of them from a publisher's OCR layer):
 
 - Act No. 4 of 2003 The State Salaries, Pensions, Gratuities and other Benefits Act, 2003 (`state-salaries-pensions-gratuities-other-benefits/`, in force 2003-07-17, Sierra Leone Web)
 - Act No. 1 of 2004 The Local Government Act, 2004 (`local-government/`, in force 2004-03-01, Sierra Leone Web)
@@ -259,15 +259,17 @@ Committed: 65 Acts (11 Parliament, 54 Sierra Leone Web, 12 of them from a publis
 - Act No. 3 of 2019 The Anti-Money Laundering and Combating of Financing of Terrorism (Amendment) Act, 2019 (`anti-money-laundering-combating-financing-terrorism-amendment/`, in force 2019-06-20, Sierra Leone Web)
 - Act No. 4 of 2019 The Borrowers and Lenders Act, 2019 (`borrowers-lenders-2019/`, in force 2019-06-20, Parliament)
 - Act No. 4 of 2020 The Public Order (Amendment) Act, 2020 (`public-order-amendment/`, in force 2020-08-18, Sierra Leone Web, publisher OCR)
+- Act No. 6 of 2020 The Breast Milk Substitutes Act, 2021 (`breast-milk-substitutes-2020/`, in force 2021-09-16, Parliament)
 - Act No. 3 of 2022 The Allied Health Professions Act 2022 (`allied-health-professions/`, in force 2022-02-24, Parliament)
+- Act No. 5 of 2022 The Sierra Leone Meteorological Agency (Amendment) Act, 2022 (`sierra-leone-meteorological-agency-amendment/`, in force 2022-03-03, Parliament)
 - Act No. 9 of 2022 The Professional Engineering Regulatory Council Act, 2022 (`professional-engineering-regulatory-council/`, in force 2022-06-23, Parliament)
 - Act No. 17 of 2022 The Public Elections Act, 2022 (`public-elections/`, in force 2022-09-20, Parliament)
 - Act No. 21 of 2022 The National Revenue Authority Act, 2022 (`national-revenue-authority/`, in force 2022-09-23, Parliament)
 
-Held (433 files; a file can be a second copy of an Act):
+Held (548 files; a file can be a second copy of an Act):
 
-- 317: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
-- 40: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
+- 431: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
+- 41: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
 - 31: no Arrangement of Sections and only N sections read from N pages
 - 24: sections read N vs Arrangement N
 - 9: sections read N vs numbers in text N
