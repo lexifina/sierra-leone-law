@@ -9,13 +9,13 @@ import batch2  # noqa: E402  (sets gazette WIDE_MIN / NOTE_SIZE for A5 prints)
 import gazette as g  # noqa: E402
 
 
-def read(b: bytes):
+def read(b: bytes, allow_ocr=False):
     import fitz
     doc = fitz.open(stream=b, filetype="pdf")
     chars = sum(len(p.get_text("text").strip()) for p in doc)
     if chars < 200 * max(1, len(doc)) * 0.2:
         return None, {"error": "no text layer", "pages": len(doc), "chars": chars}, {}
-    if sum(1 for p in doc if p.get_images()) > len(doc) / 2:
+    if not allow_ocr and sum(1 for p in doc if p.get_images()) > len(doc) / 2:
         return None, {"error": "scan (its text layer is someone's OCR; no OCR text is used)", "pages": len(doc)}, {}
     for page in doc:
         if page.rotation:

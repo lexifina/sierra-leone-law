@@ -175,6 +175,83 @@ The Constitution's history (1991 to 2016, 5 versions) was moved from the `previe
 commit for commit (same authors, dates and messages, plus an `In-force-basis` trailer); its 2022 amendments remain
 missing, as above.
 
+## Parliament prints and Sierra Leone Web (2026-11-26)
+
+`tools/sierralii/fetch2.py` read the Parliament of Sierra Leone's /uploads/acts/ and /uploads/statutory_instruments/
+PDFs from Internet Archive captures (parliament.gov.sl answers 503, or with an invalid certificate), and the PDFs
+Sierra Leone Web lists on www.sierra-leone.org/laws.html and ordinances.html (live; a secondary compilation, no
+robots.txt, no terms beyond its copyright notice). One request in flight per host, at least 1 s apart.
+`tools/sierralii/build2.py <repo>` then appends one commit per Act, with the same layout, reader and word check
+as `build_leg.py`, and these rules:
+
+- an Act already here (same number and year) is skipped; a Parliament copy wins over the Sierra Leone Web copy;
+- sections must run 1..N and N must equal the Arrangement of Sections; a print with no Arrangement is held
+  unless it reads at least one section per 1.5 pages;
+- in-force day: the date of commencement printed on the Act; else its Gazette date (Constitution s. 106(3)); an
+  Act that leaves commencement to a later order, or prints no date, or a Gazette date before its signing, is
+  held;
+- a Sierra Leone Web copy carries `Source-status: secondary copy (Sierra Leone Web, ...)`; a scan whose PDF
+  already carries a text layer is read from that layer and carries `Text-source: publisher OCR` (no OCR by
+  Lexifina); a Parliament copy carries `Source` (the Parliament URL) and `Archived-copy` (the capture read);
+- an Act in force before 1970 is stamped 1970-01-01 (git cannot store earlier dates), with its real day in the
+  subject and the `In-force` trailer.
+
+Committed: 41 Acts (6 Parliament, 35 Sierra Leone Web, 6 of them from a publisher's OCR layer):
+
+- Act No. 4 of 2003 The State Salaries, Pensions, Gratuities and other Benefits Act, 2003 (`state-salaries-pensions-gratuities-other-benefits/`, in force 2003-07-17, Sierra Leone Web)
+- Act No. 1 of 2004 The Local Government Act, 2004 (`local-government/`, in force 2004-03-01, Sierra Leone Web)
+- Act No. 2 of 2004 The Education Act, 2004 (`education/`, in force 2004-04-01, Sierra Leone Web)
+- Act No. 3 of 2004 The External Telecommunications Tax (Amendment) Act, 2004 (`external-telecommunications-tax-amendment/`, in force 2002-07-26, Sierra Leone Web, publisher OCR)
+- Act No. 6 of 2004 The Income Tax (Amendment) Act, 2004 (`income-tax-amendment/`, in force 2004-05-27, Sierra Leone Web)
+- Act No. 11 of 2004 The Payroll Tax (Amendment) Act, 2004 (`payroll-tax-amendment/`, in force 2004-04-01, Sierra Leone Web, publisher OCR)
+- Act No. 13 of 2004 The Legal Practitioners (Amendment) Act, 2004 (`legal-practitioners-amendment/`, in force 2004-12-19, Sierra Leone Web)
+- Act No. 14 of 2004 The Public Procurement Act, 2004 (`public-procurement-2004/`, in force 2004-12-16, Sierra Leone Web)
+- Act No. 1 of 2005 The Universities Act, 2005 (`universities-2005/`, in force 2005-03-10, Sierra Leone Web)
+- Act No. 7 of 2005 The Anti-Human Trafficking Act, 2005 (`anti-human-trafficking-2005/`, in force 2005-08-18, Sierra Leone Web)
+- Act No. 8 of 2005 The Income Tax (Amendment) Act, 2005 (`income-tax-amendment-2005/`, in force 2005-01-01, Sierra Leone Web, publisher OCR)
+- Act No. 3 of 2006 The Independent Media Commission (Amendment) Act, 2006 (`independent-media-commission-amendment/`, in force 2005-03-01, Sierra Leone Web, publisher OCR)
+- Act No. 4 of 2006 The Sierra Leone The National Power Authority (Amendment) Act, 2006 (`sierra-leone-national-power-authority-amendment/`, in force 2005-03-31, Sierra Leone Web)
+- Act No. 6 of 2006 The Income Tax (Amendment) (No. 2) Act, 2006 (`income-tax-amendment-no-2/`, in force 2005-01-01, Sierra Leone Web, publisher OCR)
+- Act No. 7 of 2006 The Finance Act, 2006 (`finance-2006/`, in force 2006-01-01, Sierra Leone Web)
+- Act No. 2 of 2007 The Diamond Cutting and Polishing Act, 2007 (`diamond-cutting-polishing/`, in force 2007-04-05, Sierra Leone Web)
+- Act No. 3 of 2007 The Sierra Leone Investment and Export Promotion Agency Act, 2007 (`sierra-leone-investment-export-promotion-agency/`, in force 2007-05-10, Parliament)
+- Act No. 17 of 2007 The Development Learning Centre Act, 2007 (`development-learning-centre/`, in force 2007-09-11, Sierra Leone Web)
+- Act No. 19 of 2007 The Independent Media Commission (Amendment) Act, 2007 (`independent-media-commission-amendment-2007/`, in force 2007-09-13, Sierra Leone Web)
+- Act No. 21 of 2007 The Devolution of Estates Act, 2007 (`devolution-estates/`, in force 2007-09-13, Sierra Leone Web)
+- Act No. 1 of 2008 The Medical Practitioners and Dental Surgeons (Amendment) Act, 2008 (`medical-practitioners-dental-surgeons-amendment/`, in force 2008-05-01, Sierra Leone Web)
+- Act No. 4 of 2008 The National Registration Act, 2008 (`national-registration/`, in force 2008-07-03, Sierra Leone Web)
+- Act No. 5 of 2008 The Merchant Shipping (Amendment) Act, 2008 (`merchant-shipping-amendment/`, in force 2008-07-10, Sierra Leone Web)
+- Act No. 6 of 2008 The Bumbuna Watershed Management Authority and the Bumbuna Conservation Area Act, 2008 (`bumbuna-watershed-management-authority-bumbuna-conservation-area/`, in force 2008-07-17, Parliament)
+- Act No. 7 of 2008 The Finance Act, 2008 (`finance-2008/`, in force 2008-01-01, Sierra Leone Web)
+- Act No. 10 of 2008 The National Drugs Control Act, 2008 (`national-drugs-control/`, in force 2008-08-07, Sierra Leone Web)
+- Act No. 11 of 2008 The Environment Protection Agency Act, 2008 (`environment-protection-agency/`, in force 2008-09-11, Sierra Leone Web)
+- Act No. 13 of 2008 The National Drugs Control (Amendment) Act, 2008 (`national-drugs-control-amendment/`, in force 2008-09-18, Sierra Leone Web, publisher OCR)
+- Act No. 3 of 2009 The Payment Systems Act, 2009 (`payment-systems/`, in force 2009-06-04, Sierra Leone Web)
+- Act No. 4 of 2009 The Home Mortgage Finance Act, 2009 (`home-mortgage-finance/`, in force 2009-06-11, Sierra Leone Web)
+- Act No. 5 of 2009 The Companies Act, 2009 (`companies/`, in force 2009-08-13, Sierra Leone Web)
+- Act No. 7 of 2009 The Bankruptcy Act, 2009 (`bankruptcy/`, in force 2009-08-27, Sierra Leone Web)
+- Act No. 1 of 2010 The Sierra Leone Broadcasting Corporation Act, 2009 (`sierra-leone-broadcasting-corporation/`, in force 2010-01-28, Sierra Leone Web)
+- Act No. 5 of 2010 The Weights and Measures Act, 2010 (`weights-measures/`, in force 2010-07-29, Sierra Leone Web)
+- Act No. 6 of 2010 The Sierra Leone National Commission on Small Arms Act, 2010 (`sierra-leone-national-commission-small-arms/`, in force 2010-07-29, Sierra Leone Web)
+- Act No. 1 of 2011 The Sierra Leone Teaching Service Commission Act, 2011 (`sierra-leone-teaching-service-commission/`, in force 2011-03-10, Sierra Leone Web)
+- Act No. 3 of 2011 The Persons with Disability Act, 2011 (`persons-with-disability/`, in force 2011-05-05, Sierra Leone Web)
+- Act No. 5 of 2014 The Sierra Leone Correctional Service Act, 2014 (`sierra-leone-correctional-service/`, in force 2014-09-18, Parliament)
+- Act No. 8 of 2014 The Trade Marks Act, 2014 (`trade-marks/`, in force 2014-10-09, Parliament)
+- Act No. 13 of 2014 The Borrowers and Lenders Act, 2014 (`borrowers-lenders/`, in force 2014-12-30, Parliament)
+- Act No. 3 of 2022 The Allied Health Professions Act 2022 (`allied-health-professions/`, in force 2022-02-24, Parliament)
+
+Held (99 files; a file can be a second copy of an Act):
+
+- 27: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
+- 23: no Arrangement of Sections and only N sections read from N pages
+- 20: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
+- 13: sections read N vs Arrangement N
+- 5: sections read N vs numbers in text N
+- 5: no commencement date and no Gazette date printed
+- 4: commencement left to a later order (President or Minister); its date is not in the print
+- 2: Gazette date N-N-N printed before the signing date N-N-N
+
+
 ## What AI did and did not do
 
 The scripts that read the sources and build this repository were written by Claude Code running Claude Opus 5.5 (`claude-opus-5-5`) under Lexifina's direction.

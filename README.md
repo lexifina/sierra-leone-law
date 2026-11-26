@@ -9,7 +9,7 @@ The law of Sierra Leone as a git history: one file per section (or schedule), on
 
 Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Sierra Leone's national law, which global-law reads at `sierra-leone/national/acts/`.
 
-**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and 43 Acts as enacted, 2007 to 2024: 37 from SierraLII (its Akoma Ntoso text, or the text layer of the print it publishes) and six from Government Printing Department prints. Each Act is held as enacted, one version; scanned Acts are not yet here. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source and what is held back.
+**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and 84 Acts as enacted, 2003 to 2024: 37 from SierraLII (its Akoma Ntoso text, or the text layer of the print it publishes), 12 from Government Printing Department prints that Parliament published, and 35 from the same prints as copied by Sierra Leone Web (a secondary compilation; each such commit says so). Each Act is held as enacted, one version; scanned Acts without a text layer are not here. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source and what is held back.
 
 Each act is a folder, one file per provision, plus a `README.md` listing its provisions (`employment/sec-071.md` is section 71 of the Employment Act, 2023, Act 15 of 2023: annual leave).
 
@@ -58,12 +58,12 @@ Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierra
 - `tools/check_repo.py` reads every version back from git on the day it took effect and on the day before, and compares it with the corpus: 7 versions of 7 acts, 0 mismatches, and no commit whose trailers git cannot parse (see [`REPRODUCE.md`](REPRODUCE.md)).
 - Every printed word of the six Acts, from the enacting formula to "Passed in Parliament", is in a provision file, a Part heading or the printer's colophon, and none is added; the Employment Act's text, except headings and editorial notes, is checked to be in a provision file.
 - A second build from the same corpus gave the same hashes for all 7 history commits and 14 tags.
-- History is append-only: no merge commits, no commit dates that go backwards, and none after the build.
+- History is append-only: no merge commits, no commit rewritten, and none dated after the build. Acts are added in batches, so a later batch can hold Acts older than the one before it.
 - [vulnerabilities/](vulnerabilities/): possible drafting mistakes in this law, found by global-law's detectors and checked by hand. Not run yet.
 
 ## What it does not show
 
-- **Most Sierra Leonean law.** 43 Acts are here; SierraLII publishes 106 texts, and 63 of them are held back: scans (no OCR is done), prints the reader cannot yet split by section, and subordinate legislation. Most Acts in force (the Laws of Sierra Leone, 1960, and later Acts) are not published anywhere as text. No bill is held.
+- **Most Sierra Leonean law.** 84 Acts are here. Held back: scans with no text layer (no OCR is done), prints the side-note reader cannot yet split by section (most amending Acts and Appropriation Acts), Acts that leave their commencement to a later order whose date is not printed, prints with no Gazette or commencement date, and subordinate legislation. Most of the Laws of Sierra Leone, 1960 and the Acts of 1961 to 2000 exist only as scans. No bill is held.
 - **Amendments.** Each act is held as enacted. No amending Act to the six printed Acts appears in Parliament's lists of Acts and Bills, but the annual Finance Acts were not read word for word; SierraLII holds no later version of the Employment Act.
 - **The Constitution's 2022 amendments.** Its history runs from 1991 to 2016 (5 versions, `constitution/`). Two Constitution (Amendment) Acts of 2022 (ss. 32, 34 and 35) have no usable text (SierraLII's copy of Act No. 22 of 2022 is a scan; the other is an undated print), so sections 32, 34 and 35 may not be today's text.
 - **Headings.** Part, Chapter and Division headings and SierraLII's editorial notes are left out; misspellings in the prints are kept as printed.
@@ -72,12 +72,13 @@ Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierra
 
 | Source | Kind | Past versions | Notes |
 | --- | --- | --- | --- |
-| [Parliament of Sierra Leone](https://www.parliament.gov.sl) | Acts as passed and signed, printed by the Government Printing Department | no, the Act as enacted | Six Acts, read from the PDFs' text layer (no OCR), each from an Internet Archive copy |
+| [Parliament of Sierra Leone](https://www.parliament.gov.sl) | Acts as passed and signed, printed by the Government Printing Department | no, the Act as enacted | 12 Acts, read from the PDFs' text layer (no OCR), each from an Internet Archive copy (the site no longer answers) |
 | [SierraLII](https://sierralii.gov.sl) (Sierra Leone Legal Information Institute, on Laws.Africa's Peachjam) | Acts as published | no, one expression per act | 37 Acts: the Employment Act, 2023 from an archived copy; 36 more read live on 2026-11-26 (HTML text, or the born-digital print's text layer) |
+| [Sierra Leone Web](https://www.sierra-leone.org/laws.html) | copies of the Government Printing Department prints, collected since 1996 (secondary) | no, the Act as enacted | 35 Acts not found in an official copy with a text layer; commits carry `Source-status: secondary copy`, and `Text-source: publisher OCR` where the copy is a scan with its own text layer |
 
 ## Licence
 
-See [`LICENSE`](LICENSE). SierraLII licenses its content under CC BY-NC 4.0, crediting SierraLII as the source (its terms of use, section 9), so its texts may be used only for non-commercial purposes; parliament.gov.sl states no licence for the Acts it publishes. Lexifina's own contributions (the arrangement of the history, the commit messages, the tables and the tools) are CC0 1.0.
+See [`LICENSE`](LICENSE). SierraLII licenses its content under CC BY-NC 4.0, crediting SierraLII as the source (its terms of use, section 9), so its texts may be used only for non-commercial purposes; parliament.gov.sl and Sierra Leone Web state no licence for the Acts they publish (Acts of Parliament; Sierra Leone Web's copyright notice covers its own site). Lexifina's own contributions (the arrangement of the history, the commit messages, the tables and the tools) are CC0 1.0.
 
 No AI model wrote, translated or corrected legal text, and none runs when the history is built; the scripts were written by an AI model (see [`REPRODUCE.md`](REPRODUCE.md)).
 

@@ -4,8 +4,8 @@
 
 Layout: <court>/<year>/<number>.md (court = SierraLII's court code, lower case, e.g. slca, slsc, slhc).
 Commit date: noon Freetown (GMT) on the judgment date; author: the court. Text: SierraLII's HTML text where it has
-one, else the text layer of a born-digital PDF (PyMuPDF). Scans (a page image on most pages) are held: no OCR, and
-no OCR layer anyone else made. Protected cases (children, family, sexual offences, anonymised parties) are held.
+one, else the text layer of a born-digital PDF (PyMuPDF). Scans (a page image on most pages) are taken only where the PDF SierraLII serves already carries a clean
+text layer (publisher OCR, trailer Text-source: publisher OCR); Lexifina does no OCR. Protected cases (children, family, sexual offences, anonymised parties) are held.
 """
 import glob, hashlib, html as H, json, re, subprocess, sys
 from pathlib import Path
@@ -18,13 +18,17 @@ PROTECT = re.compile(r"\b(infant|juvenile|minor|child(ren)?|adoption|custody|gua
                      r"[A-Z]\.\s?[A-Z]\.?\s+v\.?\s|v\.?\s+[A-Z]\.\s?[A-Z]\.?\b)", re.I)
 
 
+TEXT_FROM = {"html": "SierraLII HTML", "pdf": "PDF text layer (born-digital)",
+             "ocr": "the text layer SierraLII's scanned PDF carries (not OCR by Lexifina)"}
+
+
 def clean(s):
     return re.sub(r"\s+", " ", H.unescape(re.sub(r"<[^>]+>", " ", s))).strip()
 
 
 def meta_of(h):
     m = {}
-    m["title"] = clean(re.search(r"<title>(.*?)</title>", h, re.S).group(1)).rsplit("–", 1)[0].strip()
+    m["title"] = clean(re.search(r"<title>(.*?)</title>", h, re.S).group(1)).rsplit("SierraLII", 1)[0].rstrip(" -\u2013\u00e2\u20ac\u201c").strip()
     for k, lab in (("citation", "Media Neutral Citation"), ("court_name", "Court"), ("case_number", "Case number"),
                    ("judges", "Judges"), ("date", "Judgment date")):
         x = re.search(r"<dt[^>]*>\s*" + lab + r"\s*</dt>\s*<dd[^>]*>(.*?)</dd>", h, re.S)
@@ -50,10 +54,25 @@ def html_text(h):
 
 def pdf_text(p):
     import fitz
-    d = fitz.open(p)
-    if sum(1 for pg in d if pg.get_images()) > len(d) / 2:
-        return None, "scan"
+    raw = open(p, "rb").read()
+    if not raw.strip(b"\0"):
+        return None, "SierraLII's source file is empty (all zero bytes on its server)"
+    try:
+        d = fitz.open(stream=raw, filetype="pdf")
+    except Exception as e:
+        return None, f"PDF not readable ({type(e).__name__})"
     t = "\n".join(pg.get_text("text") for pg in d)
+    if sum(1 for pg in d if pg.get_images()) > len(d) / 2:
+        # a scan: use the text layer SierraLII's file already carries (publisher OCR) only when it reads cleanly;
+        # we do no OCR ourselves
+        toks = re.findall(r"[A-Za-z]+", t)
+        if len(toks) < 50 * len(d) * 0.3:
+            return None, "scan"
+        good = sum(1 for w in toks if re.search(r"[aeiouyAEIOUY]", w) and (w.islower() or w.istitle() or w.isupper()))
+        if good / len(toks) < 0.9:
+            return None, "scan (its OCR layer does not read cleanly)"
+        lines = [re.sub(r"[ \t\xa0]+", " ", l).strip() for l in t.splitlines()]
+        return "\n".join(l for l in lines if l), "ocr"
     lines = [re.sub(r"[ \t\xa0]+", " ", l).strip() for l in t.splitlines()]
     t = "\n".join(l for l in lines if l)
     if len(t) < 500:
@@ -61,7 +80,7 @@ def pdf_text(p):
     return t, "pdf"
 
 
-def main(repo):
+def main(repo, done=frozenset(), parent=None):
     recs, held = [], []
     for f in sorted(glob.glob(str(ROOT / "cache/akn/sl/judgment/*/*/*/*.html"))):
         rel = Path(f).relative_to(ROOT / "cache").as_posix()
@@ -89,10 +108,12 @@ def main(repo):
         if PROTECT.search(text[:3000]) and re.search(r"(?i)\b(rape|sexual|defilement|juvenile|infant)\b", text[:3000]):
             held.append((key, m["title"], "protected (subject named in the opening of the text)")); continue
         recs.append(dict(key=key, court=court, year=year, num=num, day=day, uri=uri, how=how, sha=sha, text=text, **m))
+    recs = [r for r in recs if r["key"] not in done]
     recs.sort(key=lambda r: (r["day"], r["key"]))
     out = open(ROOT / "judg.fi", "wb")
     w = out.write
     prev = None
+    first_from = parent
     for i, r in enumerate(recs):
         num = r["num"].zfill(3) if r["num"].isdigit() else r["num"]
         path = f"{r['court']}/{r['year']}/{num}.md"
@@ -104,21 +125,24 @@ def main(repo):
         msg = (f"{r.get('citation') or r['key']}: {r['title']}\n\n"
                f"Decided: {r['day']}\nIn-force: {r['day']}\nIn-force-basis: judgment date as SierraLII records it\n"
                f"Court: {author}\n" + (f"Citation: {r['citation']}\n" if r.get("citation") else "")
-               + f"Source: {r['uri']}\nText-from: {'SierraLII HTML' if r['how'] == 'html' else 'PDF text layer (born-digital)'}\n"
-               f"Source-sha256: {r['sha']}\n").encode("utf8")
-        ts = f"{int(__import__('calendar').timegm(__import__('time').strptime(r['day'] + ' 12:00', '%Y-%m-%d %H:%M')))} +0000"
+               + f"Source: {r['uri']}\nText-from: {TEXT_FROM[r['how']]}\n" + ("Text-source: publisher OCR\n" if r['how'] == 'ocr' else "")
+               + f"Source-sha256: {r['sha']}\n").encode("utf8")
+        ts = f"{max(43200, int(__import__('calendar').timegm(__import__('time').strptime(r['day'] + ' 12:00', '%Y-%m-%d %H:%M'))))} +0000"  # pre-1970: 1970-01-01 stamp, real day in subject + In-force
         w(b"blob\nmark :%d\ndata %d\n" % (2 * i + 1, len(body)) + body + b"\n")
         w(f"commit refs/heads/main\nmark :{2 * i + 2}\nauthor {author} <{email}> {ts}\ncommitter Lexifina <sierra-leone-law@lexifina.com> {ts}\n".encode())
         w(b"data %d\n" % len(msg) + msg)
         if prev:
             w(f"from :{prev}\n".encode())
+        elif first_from:
+            w(f"from {first_from}\n".encode())
         w(f"M 100644 :{2 * i + 1} {path}\n\n".encode())
         prev = 2 * i + 2
     out.close()
-    (ROOT / "judg_result.json").write_text(json.dumps({"committed": len(recs), "held": held}, indent=1))
+    (ROOT / "judg_result.json").write_text(json.dumps({"new": [r["key"] for r in recs], "held": held}, indent=1))
     print(len(recs), "decisions;", len(held), "held")
     if repo:
-        subprocess.run(["git", "-C", repo, "fast-import", "--force", "--quiet"], stdin=open(ROOT / "judg.fi", "rb"), check=True)
+        subprocess.run(["git", "-C", repo, "fast-import", "--quiet"], stdin=open(ROOT / "judg.fi", "rb"), check=True)
+    return [r["key"] for r in recs], held
 
 
 if __name__ == "__main__":
