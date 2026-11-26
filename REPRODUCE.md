@@ -196,7 +196,7 @@ as `build_leg.py`, and these rules:
 - an Act in force before 1970 is stamped 1970-01-01 (git cannot store earlier dates), with its real day in the
   subject and the `In-force` trailer.
 
-Committed: 67 Acts (13 Parliament, 54 Sierra Leone Web, 12 of them from a publisher's OCR layer):
+Committed: 70 Acts (16 Parliament, 54 Sierra Leone Web, 13 of them from a publisher's OCR layer):
 
 - Act No. 4 of 2003 The State Salaries, Pensions, Gratuities and other Benefits Act, 2003 (`state-salaries-pensions-gratuities-other-benefits/`, in force 2003-07-17, Sierra Leone Web)
 - Act No. 1 of 2004 The Local Government Act, 2004 (`local-government/`, in force 2004-03-01, Sierra Leone Web)
@@ -245,6 +245,7 @@ Committed: 67 Acts (13 Parliament, 54 Sierra Leone Web, 12 of them from a publis
 - Act No. 14 of 2012 The Geneva Conventions Act, 2012 (`geneva-conventions/`, in force 2012-12-20, Sierra Leone Web)
 - Act No. 15 of 2012 The Sierra Leone Red Cross Society Act, 2012 (`sierra-leone-red-cross-society/`, in force 2012-12-20, Sierra Leone Web)
 - Act No. 3 of 2013 The Finance Act, 2013 (`finance-2013/`, in force 2013-12-12, Sierra Leone Web)
+- Act No. 2 of 2014 The PETROLEUM (EXPLORATION AND PRODUCTION) (AMENDMENT) A C T, 2014. Being an Act to amend the Petroleum ( Exploration and Production) Act, 2011 (`petroleum-exploration-production-amendment-c-t-2014-being-an-amend-pet/`, in force 2014-05-20, Parliament, publisher OCR)
 - Act No. 5 of 2014 The Sierra Leone Correctional Service Act, 2014 (`sierra-leone-correctional-service/`, in force 2014-09-18, Parliament)
 - Act No. 7 of 2014 The Polytechnics (Amendment) Act, 2014 (`polytechnics-amendment/`, in force 2014-09-25, Sierra Leone Web, publisher OCR)
 - Act No. 8 of 2014 The Trade Marks Act, 2014 (`trade-marks/`, in force 2014-10-09, Parliament)
@@ -255,6 +256,8 @@ Committed: 67 Acts (13 Parliament, 54 Sierra Leone Web, 12 of them from a publis
 - Act No. 7 of 2016 The National Social Security and Insurance Trust (Amendement) Act, 2016 (`national-social-security-insurance-trust-amendement/`, in force 2016-03-31, Sierra Leone Web, publisher OCR)
 - Act No. 9 of 2016 The Sierra Leone Road Safety Authority (Amendment) Act, 2016 (`sierra-leone-road-safety-authority-amendment/`, in force 2016-06-16, Sierra Leone Web, publisher OCR)
 - Act No. 11 of 2016 The Local Government (Amendment) Act, 2016 (`local-government-amendment/`, in force 2016-07-14, Sierra Leone Web, publisher OCR)
+- Act No. 2 of 2017 The Local Government (Amendment) Act, 2017 (`local-government-amendment-2017/`, in force 2017-06-22, Parliament)
+- Act No. 8 of 2017 The Sierra Leone Meteorological Agency Act, 2017 (`sierra-leone-meteorological-agency/`, in force 2017-09-28, Parliament)
 - Act No. 2 of 2019 The Finance Act, 2019 (`finance-2019/`, in force 2019-01-11, Parliament)
 - Act No. 3 of 2019 The Anti-Money Laundering and Combating of Financing of Terrorism (Amendment) Act, 2019 (`anti-money-laundering-combating-financing-terrorism-amendment/`, in force 2019-06-20, Sierra Leone Web)
 - Act No. 4 of 2019 The Borrowers and Lenders Act, 2019 (`borrowers-lenders-2019/`, in force 2019-06-20, Parliament)
@@ -266,16 +269,16 @@ Committed: 67 Acts (13 Parliament, 54 Sierra Leone Web, 12 of them from a publis
 - Act No. 17 of 2022 The Public Elections Act, 2022 (`public-elections/`, in force 2022-09-20, Parliament)
 - Act No. 21 of 2022 The National Revenue Authority Act, 2022 (`national-revenue-authority/`, in force 2022-09-23, Parliament)
 
-Held (548 files; a file can be a second copy of an Act):
+Held (718 files; a file can be a second copy of an Act):
 
-- 431: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
-- 41: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
-- 31: no Arrangement of Sections and only N sections read from N pages
-- 24: sections read N vs Arrangement N
-- 9: sections read N vs numbers in text N
-- 5: no commencement date and no Gazette date printed
-- 4: commencement left to a later order (President or Minister); its date is not in the print
-- 3: Gazette date N-N-N printed before the signing date N-N-N
+- 553: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
+- 49: no Arrangement of Sections and only N sections read from N pages
+- 46: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
+- 36: sections read N vs Arrangement N
+- 14: sections read N vs numbers in text N
+- 10: no commencement date and no Gazette date printed
+- 6: commencement left to a later order (President or Minister); its date is not in the print
+- 4: Gazette date N-N-N printed before the signing date N-N-N
 
 ## What AI did and did not do
 
