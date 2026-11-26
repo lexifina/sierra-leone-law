@@ -21,6 +21,9 @@ import readpdf  # noqa
 from build_leg import slug_of, iso, MONTHS  # noqa
 
 SLWEB = "Sierra Leone Web, https://www.sierra-leone.org/laws.html"
+# in-force days from a secondary record, for prints that carry neither a commencement nor a Gazette date
+DATES = {(2007, 18): ("2007-09-11", "no date printed; WIPO Lex records entry into force and publication on 11 September 2007 "
+                                     "(https://www.wipo.int/wipolex/en/legislation/details/9821)")}
 
 
 def date_of(s):
@@ -156,6 +159,8 @@ def build(repo, dry=False):
         elif gz:
             day = iso(gz[1], gz[2], gz[3])
             basis = f"no commencement date printed; Gazette No. {gz[0]} of {day}, in force on publication (Constitution s. 106(3))"
+        elif (year, num) in DATES:
+            day, basis = DATES[(year, num)]
         else:
             held.append((k, title, "no commencement date and no Gazette date printed")); continue
         sg = date_of(" ".join(meta["signed"])) if meta.get("signed") else None

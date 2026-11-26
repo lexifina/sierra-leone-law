@@ -196,7 +196,7 @@ as `build_leg.py`, and these rules:
 - an Act in force before 1970 is stamped 1970-01-01 (git cannot store earlier dates), with its real day in the
   subject and the `In-force` trailer.
 
-Committed: 41 Acts (6 Parliament, 35 Sierra Leone Web, 6 of them from a publisher's OCR layer):
+Committed: 65 Acts (11 Parliament, 54 Sierra Leone Web, 12 of them from a publisher's OCR layer):
 
 - Act No. 4 of 2003 The State Salaries, Pensions, Gratuities and other Benefits Act, 2003 (`state-salaries-pensions-gratuities-other-benefits/`, in force 2003-07-17, Sierra Leone Web)
 - Act No. 1 of 2004 The Local Government Act, 2004 (`local-government/`, in force 2004-03-01, Sierra Leone Web)
@@ -216,6 +216,7 @@ Committed: 41 Acts (6 Parliament, 35 Sierra Leone Web, 6 of them from a publishe
 - Act No. 2 of 2007 The Diamond Cutting and Polishing Act, 2007 (`diamond-cutting-polishing/`, in force 2007-04-05, Sierra Leone Web)
 - Act No. 3 of 2007 The Sierra Leone Investment and Export Promotion Agency Act, 2007 (`sierra-leone-investment-export-promotion-agency/`, in force 2007-05-10, Parliament)
 - Act No. 17 of 2007 The Development Learning Centre Act, 2007 (`development-learning-centre/`, in force 2007-09-11, Sierra Leone Web)
+- Act No. 18 of 2007 The Registration of Business Act, 2007 (`registration-business/`, in force 2007-09-11, Sierra Leone Web)
 - Act No. 19 of 2007 The Independent Media Commission (Amendment) Act, 2007 (`independent-media-commission-amendment-2007/`, in force 2007-09-13, Sierra Leone Web)
 - Act No. 21 of 2007 The Devolution of Estates Act, 2007 (`devolution-estates/`, in force 2007-09-13, Sierra Leone Web)
 - Act No. 1 of 2008 The Medical Practitioners and Dental Surgeons (Amendment) Act, 2008 (`medical-practitioners-dental-surgeons-amendment/`, in force 2008-05-01, Sierra Leone Web)
@@ -235,22 +236,44 @@ Committed: 41 Acts (6 Parliament, 35 Sierra Leone Web, 6 of them from a publishe
 - Act No. 6 of 2010 The Sierra Leone National Commission on Small Arms Act, 2010 (`sierra-leone-national-commission-small-arms/`, in force 2010-07-29, Sierra Leone Web)
 - Act No. 1 of 2011 The Sierra Leone Teaching Service Commission Act, 2011 (`sierra-leone-teaching-service-commission/`, in force 2011-03-10, Sierra Leone Web)
 - Act No. 3 of 2011 The Persons with Disability Act, 2011 (`persons-with-disability/`, in force 2011-05-05, Sierra Leone Web)
+- Act No. 3 of 2012 The National Minerals Agency Act, 2012 (`national-minerals-agency/`, in force 2012-05-03, Sierra Leone Web)
+- Act No. 5 of 2012 The Postal Services Regulatory Agency Act, 2012 (`postal-services-regulatory-agency/`, in force 2012-06-21, Sierra Leone Web)
+- Act No. 6 of 2012 The Legal Aid Act, 2012 (`legal-aid/`, in force 2012-08-23, Sierra Leone Web)
+- Act No. 7 of 2012 The Nuclear Safety and Radiation Protection Act, 2012 (`nuclear-safety-radiation-protection/`, in force 2012-08-23, Sierra Leone Web)
+- Act No. 8 of 2012 The National Pharmaceutical Procurement Unit Act, 2012 (`national-pharmaceutical-procurement-unit/`, in force 2012-08-30, Sierra Leone Web)
+- Act No. 11 of 2012 The National Protected Area Authority and Conservation Trust Fund Act, 2012 (`national-protected-area-authority-conservation-trust-fund/`, in force 2012-11-01, Sierra Leone Web)
+- Act No. 14 of 2012 The Geneva Conventions Act, 2012 (`geneva-conventions/`, in force 2012-12-20, Sierra Leone Web)
+- Act No. 15 of 2012 The Sierra Leone Red Cross Society Act, 2012 (`sierra-leone-red-cross-society/`, in force 2012-12-20, Sierra Leone Web)
+- Act No. 3 of 2013 The Finance Act, 2013 (`finance-2013/`, in force 2013-12-12, Sierra Leone Web)
 - Act No. 5 of 2014 The Sierra Leone Correctional Service Act, 2014 (`sierra-leone-correctional-service/`, in force 2014-09-18, Parliament)
+- Act No. 7 of 2014 The Polytechnics (Amendment) Act, 2014 (`polytechnics-amendment/`, in force 2014-09-25, Sierra Leone Web, publisher OCR)
 - Act No. 8 of 2014 The Trade Marks Act, 2014 (`trade-marks/`, in force 2014-10-09, Parliament)
 - Act No. 13 of 2014 The Borrowers and Lenders Act, 2014 (`borrowers-lenders/`, in force 2014-12-30, Parliament)
+- Act No. 1 of 2015 The Telecommunications (Amendment) Act, 2015 (`telecommunications-amendment/`, in force 2015-04-16, Sierra Leone Web, publisher OCR)
+- Act No. 3 of 2015 The National Commission for Social Action (Amendment) Act, 2015 (`national-commission-social-action-amendment/`, in force 2015-08-06, Sierra Leone Web)
+- Act No. 6 of 2016 The Finance Act, 2016 (`finance-2016/`, in force 2016-03-24, Sierra Leone Web)
+- Act No. 7 of 2016 The National Social Security and Insurance Trust (Amendement) Act, 2016 (`national-social-security-insurance-trust-amendement/`, in force 2016-03-31, Sierra Leone Web, publisher OCR)
+- Act No. 9 of 2016 The Sierra Leone Road Safety Authority (Amendment) Act, 2016 (`sierra-leone-road-safety-authority-amendment/`, in force 2016-06-16, Sierra Leone Web, publisher OCR)
+- Act No. 11 of 2016 The Local Government (Amendment) Act, 2016 (`local-government-amendment/`, in force 2016-07-14, Sierra Leone Web, publisher OCR)
+- Act No. 2 of 2019 The Finance Act, 2019 (`finance-2019/`, in force 2019-01-11, Parliament)
+- Act No. 3 of 2019 The Anti-Money Laundering and Combating of Financing of Terrorism (Amendment) Act, 2019 (`anti-money-laundering-combating-financing-terrorism-amendment/`, in force 2019-06-20, Sierra Leone Web)
+- Act No. 4 of 2019 The Borrowers and Lenders Act, 2019 (`borrowers-lenders-2019/`, in force 2019-06-20, Parliament)
+- Act No. 4 of 2020 The Public Order (Amendment) Act, 2020 (`public-order-amendment/`, in force 2020-08-18, Sierra Leone Web, publisher OCR)
 - Act No. 3 of 2022 The Allied Health Professions Act 2022 (`allied-health-professions/`, in force 2022-02-24, Parliament)
+- Act No. 9 of 2022 The Professional Engineering Regulatory Council Act, 2022 (`professional-engineering-regulatory-council/`, in force 2022-06-23, Parliament)
+- Act No. 17 of 2022 The Public Elections Act, 2022 (`public-elections/`, in force 2022-09-20, Parliament)
+- Act No. 21 of 2022 The National Revenue Authority Act, 2022 (`national-revenue-authority/`, in force 2022-09-23, Parliament)
 
-Held (99 files; a file can be a second copy of an Act):
+Held (433 files; a file can be a second copy of an Act):
 
-- 27: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
-- 23: no Arrangement of Sections and only N sections read from N pages
-- 20: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
-- 13: sections read N vs Arrangement N
-- 5: sections read N vs numbers in text N
+- 317: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
+- 40: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
+- 31: no Arrangement of Sections and only N sections read from N pages
+- 24: sections read N vs Arrangement N
+- 9: sections read N vs numbers in text N
 - 5: no commencement date and no Gazette date printed
 - 4: commencement left to a later order (President or Minister); its date is not in the print
-- 2: Gazette date N-N-N printed before the signing date N-N-N
-
+- 3: Gazette date N-N-N printed before the signing date N-N-N
 
 ## What AI did and did not do
 
