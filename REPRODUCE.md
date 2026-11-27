@@ -196,7 +196,7 @@ as `build_leg.py`, and these rules:
 - an Act in force before 1970 is stamped 1970-01-01 (git cannot store earlier dates), with its real day in the
   subject and the `In-force` trailer.
 
-Committed: 70 Acts (16 Parliament, 54 Sierra Leone Web, 13 of them from a publisher's OCR layer):
+Committed: 73 Acts (17 Parliament, 56 Sierra Leone Web, 13 of them from a publisher's OCR layer):
 
 - Act No. 4 of 2003 The State Salaries, Pensions, Gratuities and other Benefits Act, 2003 (`state-salaries-pensions-gratuities-other-benefits/`, in force 2003-07-17, Sierra Leone Web)
 - Act No. 1 of 2004 The Local Government Act, 2004 (`local-government/`, in force 2004-03-01, Sierra Leone Web)
@@ -242,6 +242,7 @@ Committed: 70 Acts (16 Parliament, 54 Sierra Leone Web, 13 of them from a publis
 - Act No. 7 of 2012 The Nuclear Safety and Radiation Protection Act, 2012 (`nuclear-safety-radiation-protection/`, in force 2012-08-23, Sierra Leone Web)
 - Act No. 8 of 2012 The National Pharmaceutical Procurement Unit Act, 2012 (`national-pharmaceutical-procurement-unit/`, in force 2012-08-30, Sierra Leone Web)
 - Act No. 11 of 2012 The National Protected Area Authority and Conservation Trust Fund Act, 2012 (`national-protected-area-authority-conservation-trust-fund/`, in force 2012-11-01, Sierra Leone Web)
+- Act No. 12 of 2012 The Sexual Offences Act, 2012 (`sexual-offences/`, in force 2012-11-01, Sierra Leone Web)
 - Act No. 14 of 2012 The Geneva Conventions Act, 2012 (`geneva-conventions/`, in force 2012-12-20, Sierra Leone Web)
 - Act No. 15 of 2012 The Sierra Leone Red Cross Society Act, 2012 (`sierra-leone-red-cross-society/`, in force 2012-12-20, Sierra Leone Web)
 - Act No. 3 of 2013 The Finance Act, 2013 (`finance-2013/`, in force 2013-12-12, Sierra Leone Web)
@@ -249,6 +250,7 @@ Committed: 70 Acts (16 Parliament, 54 Sierra Leone Web, 13 of them from a publis
 - Act No. 5 of 2014 The Sierra Leone Correctional Service Act, 2014 (`sierra-leone-correctional-service/`, in force 2014-09-18, Parliament)
 - Act No. 7 of 2014 The Polytechnics (Amendment) Act, 2014 (`polytechnics-amendment/`, in force 2014-09-25, Sierra Leone Web, publisher OCR)
 - Act No. 8 of 2014 The Trade Marks Act, 2014 (`trade-marks/`, in force 2014-10-09, Parliament)
+- Act No. 9 of 2014 The Companies (Amendment) Act, 2014 (`companies-amendment/`, in force 2014-10-16, Sierra Leone Web)
 - Act No. 13 of 2014 The Borrowers and Lenders Act, 2014 (`borrowers-lenders/`, in force 2014-12-30, Parliament)
 - Act No. 1 of 2015 The Telecommunications (Amendment) Act, 2015 (`telecommunications-amendment/`, in force 2015-04-16, Sierra Leone Web, publisher OCR)
 - Act No. 3 of 2015 The National Commission for Social Action (Amendment) Act, 2015 (`national-commission-social-action-amendment/`, in force 2015-08-06, Sierra Leone Web)
@@ -258,6 +260,7 @@ Committed: 70 Acts (16 Parliament, 54 Sierra Leone Web, 13 of them from a publis
 - Act No. 11 of 2016 The Local Government (Amendment) Act, 2016 (`local-government-amendment/`, in force 2016-07-14, Sierra Leone Web, publisher OCR)
 - Act No. 2 of 2017 The Local Government (Amendment) Act, 2017 (`local-government-amendment-2017/`, in force 2017-06-22, Parliament)
 - Act No. 8 of 2017 The Sierra Leone Meteorological Agency Act, 2017 (`sierra-leone-meteorological-agency/`, in force 2017-09-28, Parliament)
+- Act No. 11 of 2017 The National Medical Supplies Agency Act, 2017 (`national-medical-supplies-agency/`, in force 2017-11-02, Parliament)
 - Act No. 2 of 2019 The Finance Act, 2019 (`finance-2019/`, in force 2019-01-11, Parliament)
 - Act No. 3 of 2019 The Anti-Money Laundering and Combating of Financing of Terrorism (Amendment) Act, 2019 (`anti-money-laundering-combating-financing-terrorism-amendment/`, in force 2019-06-20, Sierra Leone Web)
 - Act No. 4 of 2019 The Borrowers and Lenders Act, 2019 (`borrowers-lenders-2019/`, in force 2019-06-20, Parliament)
@@ -269,13 +272,13 @@ Committed: 70 Acts (16 Parliament, 54 Sierra Leone Web, 13 of them from a publis
 - Act No. 17 of 2022 The Public Elections Act, 2022 (`public-elections/`, in force 2022-09-20, Parliament)
 - Act No. 21 of 2022 The National Revenue Authority Act, 2022 (`national-revenue-authority/`, in force 2022-09-23, Parliament)
 
-Held (718 files; a file can be a second copy of an Act):
+Held (715 files; a file can be a second copy of an Act):
 
 - 553: no 'No. N YYYY Sierra Leone <title>' head line (not an Act print the reader knows)
 - 49: no Arrangement of Sections and only N sections read from N pages
 - 46: reader: start line not found: ^(?:BE IT )?ENACTED by|^ENACTED by
-- 36: sections read N vs Arrangement N
-- 14: sections read N vs numbers in text N
+- 34: sections read N vs Arrangement N
+- 13: sections read N vs numbers in text N
 - 10: no commencement date and no Gazette date printed
 - 6: commencement left to a later order (President or Minister); its date is not in the print
 - 4: Gazette date N-N-N printed before the signing date N-N-N
