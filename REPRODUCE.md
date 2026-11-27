@@ -196,7 +196,7 @@ as `build_leg.py`, and these rules:
 - an Act in force before 1970 is stamped 1970-01-01 (git cannot store earlier dates), with its real day in the
   subject and the `In-force` trailer.
 
-Committed: 66 Acts (15 Parliament, 51 Sierra Leone Web, 13 of them from a publisher's OCR layer):
+Committed: 67 Acts (15 Parliament, 51 Sierra Leone Web, 13 of them from a publisher's OCR layer):
 
 - Act No. 4 of 2003 The State Salaries, Pensions, Gratuities and other Benefits Act, 2003 (`state-salaries-pensions-gratuities-other-benefits/`, in force 2003-07-17, Sierra Leone Web)
 - Act No. 1 of 2004 The Local Government Act, 2004 (`local-government/`, in force 2004-03-01, Sierra Leone Web)
@@ -255,6 +255,7 @@ Committed: 66 Acts (15 Parliament, 51 Sierra Leone Web, 13 of them from a publis
 - Act No. 11 of 2016 The Local Government (Amendment) Act, 2016 (`local-government-amendment/`, in force 2016-07-14, Sierra Leone Web, publisher OCR)
 - Act No. 8 of 2017 The Sierra Leone Meteorological Agency Act, 2017 (`sierra-leone-meteorological-agency/`, in force 2017-09-28, Parliament)
 - Act No. 11 of 2017 The National Medical Supplies Agency Act, 2017 (`national-medical-supplies-agency/`, in force 2017-11-02, Parliament)
+- Act No. 4 of 2018 The National Fertilizer Regulatory Agency Act, 2017 (`national-fertilizer-regulatory-agency/`, in force 2018-04-05, Sierra Leone Web)
 - Act No. 3 of 2019 The Anti-Money Laundering and Combating of Financing of Terrorism (Amendment) Act, 2019 (`anti-money-laundering-combating-financing-terrorism-amendment/`, in force 2019-06-20, Sierra Leone Web)
 - Act No. 4 of 2019 The Borrowers and Lenders Act, 2019 (`borrowers-lenders-2019/`, in force 2019-06-20, Parliament)
 - Act No. 4 of 2020 The Public Order (Amendment) Act, 2020 (`public-order-amendment/`, in force 2020-08-18, Sierra Leone Web, publisher OCR)
