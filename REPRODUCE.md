@@ -273,7 +273,7 @@ Held (722 files; a file can be a second copy of an Act):
 - 34: sections read N vs Arrangement N
 - 13: sections read N vs numbers in text N
 - 10: no commencement date and no Gazette date printed
-- 7: withdrawn N-N-N: body lines outside any section, or sections holding the text of others (pages repeated or out of order)
+- 7: withdrawn after a section check: body lines outside any section, or sections holding the text of others (pages repeated or out of order)
 - 6: commencement left to a later order (President or Minister); its date is not in the print
 - 4: Gazette date N-N-N printed before the signing date N-N-N
 
