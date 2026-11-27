@@ -9,7 +9,7 @@ The law of Sierra Leone as a git history: one file per section (or schedule), on
 
 Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Sierra Leone's national law, which global-law reads at `sierra-leone/national/acts/`.
 
-**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and 110 Acts as enacted, 2003 to 2024: 37 from SierraLII (its Akoma Ntoso text, or the text layer of the print it publishes), 21 from Government Printing Department prints that Parliament published, 51 from the same prints as copied by Sierra Leone Web, and 1 as copied by FAOLEX (both secondary copies; each such commit says so). Each Act is held as enacted, one version; scanned Acts without a text layer are not here. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source and what is held back.
+**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and 148 Acts as enacted, 1961 to 2024: 38 from SierraLII (its Akoma Ntoso text, or the text layer of the print it publishes), 50 from Government Printing Department prints that Parliament published, 59 from the same prints as copied by Sierra Leone Web, and 1 as copied by FAOLEX (both secondary copies; each such commit says so). Each Act is held as enacted, one version, one file per section; 38 whose prints could not be split by section are one whole-text file, `text.md` (listed in [`STRUCTURE.md`](STRUCTURE.md)). Scanned Acts without a text layer are not here. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source and what is held back.
 
 Each act is a folder, one file per provision, plus a `README.md` listing its provisions (`employment/sec-071.md` is section 71 of the Employment Act, 2023, Act 15 of 2023: annual leave).
 
@@ -63,7 +63,7 @@ Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierra
 
 ## What it does not show
 
-- **Most Sierra Leonean law.** 110 Acts are here. Held back: scans with no text layer (no OCR is done), prints the side-note reader cannot yet split by section (most amending Acts and Appropriation Acts), Acts that leave their commencement to a later order whose date is not printed, prints with no Gazette or commencement date, and subordinate legislation. Most of the Laws of Sierra Leone, 1960 and the Acts of 1961 to 2000 exist only as scans. No bill is held.
+- **Most Sierra Leonean law.** 148 Acts are here. Held back: scans with no text layer (no OCR is done), prints the side-note reader cannot yet split by section (most amending Acts and Appropriation Acts), Acts that leave their commencement to a later order whose date is not printed, prints with no Gazette or commencement date, and subordinate legislation. Most of the Laws of Sierra Leone, 1960 and the Acts of 1961 to 2000 exist only as scans. No bill is held.
 - **Amendments.** Each act is held as enacted. No amending Act to the six printed Acts appears in Parliament's lists of Acts and Bills, but the annual Finance Acts were not read word for word; SierraLII holds no later version of the Employment Act.
 - **The Constitution's 2022 amendments.** Its history runs from 1991 to 2016 (5 versions, `constitution/`). Two Constitution (Amendment) Acts of 2022 (ss. 32, 34 and 35) have no usable text (SierraLII's copy of Act No. 22 of 2022 is a scan; the other is an undated print), so sections 32, 34 and 35 may not be today's text.
 - **Headings.** Part, Chapter and Division headings and SierraLII's editorial notes are left out; misspellings in the prints are kept as printed.
@@ -72,9 +72,9 @@ Each act is credited to itself as enacted (`Act No. 6 of 2019 <act-2019-6@sierra
 
 | Source | Kind | Past versions | Notes |
 | --- | --- | --- | --- |
-| [Parliament of Sierra Leone](https://www.parliament.gov.sl) | Acts as passed and signed, printed by the Government Printing Department | no, the Act as enacted | 21 Acts, read from the PDFs' text layer (no OCR), each from an Internet Archive copy (the site no longer answers) |
+| [Parliament of Sierra Leone](https://www.parliament.gov.sl) | Acts as passed and signed, printed by the Government Printing Department | no, the Act as enacted | 50 Acts, read from the PDFs' text layer (no OCR), each from an Internet Archive copy (the site no longer answers) |
 | [SierraLII](https://sierralii.gov.sl) (Sierra Leone Legal Information Institute, on Laws.Africa's Peachjam) | Acts as published | no, one expression per act | 37 Acts: the Employment Act, 2023 from an archived copy; 36 more read live on 2026-11-26 (HTML text, or the born-digital print's text layer) |
-| [Sierra Leone Web](https://www.sierra-leone.org/laws.html) | copies of the Government Printing Department prints, collected since 1996 (secondary) | no, the Act as enacted | 51 Acts not found in an official copy with a text layer; commits carry `Source-status: secondary copy`, and `Text-source: publisher OCR` where the copy is a scan with its own text layer |
+| [Sierra Leone Web](https://www.sierra-leone.org/laws.html) | copies of the Government Printing Department prints, collected since 1996 (secondary) | no, the Act as enacted | 59 Acts not found in an official copy with a text layer; commits carry `Source-status: secondary copy`, and `Text-source: publisher OCR` where the copy is a scan with its own text layer |
 | [FAOLEX](https://faolex.fao.org) (FAO legal database) | copies of the Government Printing Department prints (secondary) | no, the Act as enacted | 1 Act (the National Fertilizer Regulatory Agency Act); commits carry `Source-status: secondary copy (FAOLEX, ...)` |
 
 ## Licence
