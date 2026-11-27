@@ -8,6 +8,7 @@ res = json.loads((ROOT / "build2_result.json").read_text())
 com, held = res["committed"], res["held"]
 n_parl = sum(1 for c in com if c["src"] == "parl")
 n_web = sum(1 for c in com if c["src"] == "slweb")
+n_fao = sum(1 for c in com if c["src"] == "faolex")
 n_ocr = sum(1 for c in com if c["kind"] == "ocr")
 total = 43 + len(com)
 first = min([c["year"] for c in com] + [2007])
@@ -24,8 +25,9 @@ r = (repo / "README.md").read_text("utf8")
 r = sub(r, r"^\*\*What is in it now:\*\*.*$",
         f"**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and "
         f"{total} Acts as enacted, {first} to 2024: 37 from SierraLII (its Akoma Ntoso text, or the text layer of the print "
-        f"it publishes), {6 + n_parl} from Government Printing Department prints that Parliament published, and {n_web} "
-        f"from the same prints as copied by Sierra Leone Web (a secondary compilation; each such commit says so). Each Act "
+        f"it publishes), {6 + n_parl} from Government Printing Department prints that Parliament published, {n_web} "
+        f"from the same prints as copied by Sierra Leone Web, and {n_fao} as copied by FAOLEX (both secondary copies; "
+        f"each such commit says so). Each Act "
         f"is held as enacted, one version; scanned Acts without a text layer are not here. [`REPRODUCE.md`](REPRODUCE.md) "
         f"lists every act with its source and what is held back.")
 r = sub(r, r"^- History is append-only:.*$",

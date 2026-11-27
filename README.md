@@ -9,7 +9,7 @@ The law of Sierra Leone as a git history: one file per section (or schedule), on
 
 Part of [lexifina/global-law](https://github.com/lexifina/global-law), one git history for every country's law: this is Sierra Leone's national law, which global-law reads at `sierra-leone/national/acts/`.
 
-**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and 110 Acts as enacted, 2003 to 2024: 37 from SierraLII (its Akoma Ntoso text, or the text layer of the print it publishes), 21 from Government Printing Department prints that Parliament published, and 51 from the same prints as copied by Sierra Leone Web (a secondary compilation; each such commit says so). Each Act is held as enacted, one version; scanned Acts without a text layer are not here. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source and what is held back.
+**What is in it now:** the Constitution of Sierra Leone, 1991 with its amendments to 2016 (5 versions), and 110 Acts as enacted, 2003 to 2024: 37 from SierraLII (its Akoma Ntoso text, or the text layer of the print it publishes), 21 from Government Printing Department prints that Parliament published, 51 from the same prints as copied by Sierra Leone Web, and 1 as copied by FAOLEX (both secondary copies; each such commit says so). Each Act is held as enacted, one version; scanned Acts without a text layer are not here. [`REPRODUCE.md`](REPRODUCE.md) lists every act with its source and what is held back.
 
 Each act is a folder, one file per provision, plus a `README.md` listing its provisions (`employment/sec-071.md` is section 71 of the Employment Act, 2023, Act 15 of 2023: annual leave).
 
